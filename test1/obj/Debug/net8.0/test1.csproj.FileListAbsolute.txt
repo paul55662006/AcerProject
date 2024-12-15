@@ -89,3 +89,16 @@ C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.pdb
 C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.genruntimeconfig.cache
 C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\ref\test1.dll
 C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.sourcelink.json
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.csproj.AssemblyReference.cache
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.csproj.Up2Date
