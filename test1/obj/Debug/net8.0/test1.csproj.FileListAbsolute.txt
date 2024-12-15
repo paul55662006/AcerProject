@@ -88,3 +88,4 @@ C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\refint\test1.d
 C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.pdb
 C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.genruntimeconfig.cache
 C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\ref\test1.dll
+C:\Users\paul5\OneDrive\桌面\AcerProject\test1\obj\Debug\net8.0\test1.sourcelink.json
