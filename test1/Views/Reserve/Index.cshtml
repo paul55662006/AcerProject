@@ -76,62 +76,51 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Video Modal End -->
-    <!-- About Start -->
-    
-    <!-- About End -->
-    <!-- Services Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
-                <h6 class="text-primary text-uppercase">Functional category</h6>
-                <h1 class="display-5 text-uppercase mb-0">系統選項</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-md-6">
-                    <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-house display-1 text-primary me-4"></i>
-                        <div>
-                            <h5 class="text-uppercase mb-3">預約資訊總攬</h5>
-                            <p>線上預約(LineBot)&線下預約資訊</p>
-                            <a class="text-primary text-uppercase" href="">進入<i class="bi bi-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-food display-1 text-primary me-4"></i>
-                        <div>
-                            <h5 class="text-uppercase mb-3">診別查詢</h5>
-                            <p>依診別查詢預約狀況</p>
-                            <a class="text-primary text-uppercase" href="">進入<i class="bi bi-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-grooming display-1 text-primary me-4"></i>
-                        <div>
-                            <h5 class="text-uppercase mb-3">醫師班表</h5>
-                            <p>醫師班表排定&查詢</p>
-                            <a class="text-primary text-uppercase" href="">進入<i class="bi bi-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-cat display-1 text-primary me-4"></i>
-                        <div>
-                            <h5 class="text-uppercase mb-3">線下預約</h5>
-                            <p>非網路預約&現場預約填寫</p>
-                            <a class="text-primary text-uppercase" href="">進入<i class="bi bi-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>         
+    <!-- ------------------------------------- -->
+    <div class="panel panel-default">
+        <div style="padding: 10px; background-color: #e0e0e0;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+            </svg>
+            預約列表
         </div>
-    </div>    
+        <table class="table table-bordered">
+            <thead>                
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">主人姓名</th>
+                    <th scope="col">手機號碼</th>
+                    <th scope="col">寵物名稱</th>
+                    <th scope="col">寵物年齡</th>
+                    <th scope="col">寵物症狀</th>
+                    <th scope="col">創建時間</th>
+                </tr>
+            </thead>
+            <tbody>
+                <style>
+                    tr {
+                        border-width: 1px;
+                        border-style: solid;
+                        border-color: rgb(156, 186, 95);
+                        font-family: Verdana;
+                    }</style>
+                @foreach (var client in Model)
+                {
+                    <tr>
+                        <td>@client.Id</td>
+                        <td>@client.Name</td>
+                        <td>@client.Phone</td>
+                        <td>@client.Pet_name</td>
+                        <td>@client.Pet_age</td>
+                        <td>@client.Symptom</td>
+                        <td>@client.initDate</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

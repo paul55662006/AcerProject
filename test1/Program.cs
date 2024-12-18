@@ -28,9 +28,10 @@ namespace test1
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=Home}/{action=Index}/{id?}");
+				pattern: "{controller=Reserve}/{action=Index}/{id?}");
 
 			app.Run();
+
 		}
 	}
 }
