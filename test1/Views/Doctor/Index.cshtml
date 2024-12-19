@@ -50,9 +50,9 @@
         <div class="container py-5">
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
-                    <h1 class="display-1 text-uppercase text-dark mb-lg-4">寵物醫院預約系統</h1>
+                    <h1 class="display-1 text-uppercase text-dark mb-lg-4">寵物醫師班表</h1>
                     <h1 class="text-uppercase text-white mb-lg-4">Make Pets Healthy</h1>
-                    <p class="fs-4 text-white mb-lg-4">線上顧客預約(LineBot)/線下顧客預約/醫師班表調整</p>
+                    <p class="fs-4 text-white mb-lg-4">班表查詢/調整/建檔</p>
                     
                 </div>
             </div>
@@ -77,55 +77,39 @@
             </div>
         </div>
     </div>
-    <!-- Video Modal End -->
-    <!-- About Start -->
-    
-    <!-- About End -->
     <!-- Services Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
-                <h6 class="text-primary text-uppercase">Functional category</h6>
-                <h1 class="display-5 text-uppercase mb-0">系統選項</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-md-6">
-                    <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-house display-1 text-primary me-4"></i>
-                        <div>
-                            <h5 class="text-uppercase mb-3">預約資訊總攬</h5>
-                            <p>線上預約(LineBot)&線下預約資訊</p>
-                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Reserve")"</a>進入<i class="bi bi-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-food display-1 text-primary me-4"></i>
-                        <div>
-                            <h5 class="text-uppercase mb-3">診別查詢</h5>
-                            <p>依診別查詢預約狀況</p>
-                            <a class="text-primary text-uppercase" href="">進入<i class="bi bi-chevron-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
+    <div class="container-fluid">
+        <div class="container">           
+            <!--時間選擇器-->
+
+            <!--時間選擇器-->
+            <div class="row">
+                <div class="col-md-4">
                     <div class="service-item bg-light d-flex p-4">
                         <i class="flaticon-grooming display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">醫師班表</h5>
-                            <p>醫師班表排定&查詢</p>
-                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">進入<i class="bi bi-chevron-right"></i></a>
+                            <h5 class="text-uppercase mb-3">班表檢視</h5>
+                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">打開</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+
+                <div class="col-md-4">
                     <div class="service-item bg-light d-flex p-4">
                         <i class="flaticon-cat display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">線下預約</h5>
-                            <p>非網路預約&現場預約填寫</p>
-                            <a class="text-primary text-uppercase" href="">進入<i class="bi bi-chevron-right"></i></a>
+                            <h5 class="text-uppercase mb-3">班表調整</h5>
+                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">打開</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class="flaticon-cat display-1 text-primary me-4"></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">醫師建檔</h5>
+                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">打開</a>
                         </div>
                     </div>
                 </div>
