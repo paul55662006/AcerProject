@@ -89,7 +89,7 @@
                         <i class="flaticon-grooming display-1 text-primary me-4"></i>
                         <div>
                             <h5 class="text-uppercase mb-3">班表檢視</h5>
-                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">打開</a>
+                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">開啟</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <i class="flaticon-cat display-1 text-primary me-4"></i>
                         <div>
                             <h5 class="text-uppercase mb-3">班表調整</h5>
-                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">打開</a>
+                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">開啟</a>
                         </div>
                     </div>
                 </div>
@@ -109,10 +109,43 @@
                         <i class="flaticon-cat display-1 text-primary me-4"></i>
                         <div>
                             <h5 class="text-uppercase mb-3">醫師建檔</h5>
-                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">打開</a>
+                            <a class="text-primary text-uppercase" href="@Url.Action("Index", "Doctor")">開啟</a>
                         </div>
                     </div>
                 </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">醫師姓名</th>
+                            <th scope="col">專科</th>
+                            <th scope="col">預約時間</th>
+                            <th scope="col">備註</th>
+                            <th scope="col">創建時間</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <style>
+                            tr {
+                                border-width: 1px;
+                                border-style: solid;
+                                border-color: rgb(156, 186, 95);
+                                font-family: Verdana;
+                            }</style>
+                        @foreach (var doctor in Model)
+                        {
+                            <tr>
+                                <td>@doctor.Id</td>
+                                <td>@doctor.Doctor_name</td>
+                                <td>@doctor.Pet_type</td>
+                                <td>@doctor.Reserve_time</td>
+                                <td>@doctor.others</td>
+                                <td>@doctor.initTime</td>                                
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>    
