@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using test1.Models;
+
 namespace test1
 {
 	public class Program
@@ -5,11 +8,14 @@ namespace test1
 		public static void Main(string[] args)
 		{
 			var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
 
-			// Add services to the container.
-			builder.Services.AddControllersWithViews();
+            // Add services to the container.
+            builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-			var app = builder.Build();
+
+            var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -24,7 +30,7 @@ namespace test1
 
 			app.UseRouting();
 
-			app.UseAuthorization();
+			//app.UseAuthorization();
 
 			app.MapControllerRoute(
 				name: "default",

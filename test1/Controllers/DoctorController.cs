@@ -7,18 +7,25 @@ namespace test1.Controllers
     {
         private readonly AppDbContext _context;
 
-        public DoctorController()
+        public DoctorController(AppDbContext context)
         {
-            _context = new AppDbContext(); // 初始化 DbContext
+            _context =  context; // 初始化 DbContext
         }
 
         public IActionResult Index()
         {
-            // 從資料庫中讀取所有 clients 資料
-            var Doctors = _context.Doctor_time.ToList();
-
-            // 將資料傳遞給 View
-            return View(Doctors);
+            try
+            {
+                var Doctors = _context.Doctor_time.ToList(); // 嘗試從資料庫讀取數據
+                Console.WriteLine($"成功連接資料庫，讀取到 {Doctors.Count} 條資料");
+                return View(Doctors);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"資料庫連接失敗: {ex.Message}");
+                throw;
+            }
         }
+
     }
 }

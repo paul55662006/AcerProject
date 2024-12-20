@@ -7,9 +7,9 @@ namespace test1.Controllers
     {
         private readonly AppDbContext _context;
 
-        public ReserveController()
+        public ReserveController(AppDbContext context)
         {
-            _context = new AppDbContext(); // 初始化 DbContext
+            _context = context; // 初始化 DbContext
         }
 
         public IActionResult Index()
