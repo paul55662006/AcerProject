@@ -1,0 +1,39 @@
+﻿<table class="table table-bordered table-hover table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">預約Id</th>
+            <th scope="col">主人姓名</th>
+            <th scope="col">手機號碼</th>
+            <th scope="col">寵物類型</th>
+            <th scope="col">寵物名稱</th>
+            <th scope="col">寵物年齡</th>
+            <th scope="col">寵物症狀</th>
+            <th scope="col">預約日期</th>
+            <th scope="col">預約時段</th>
+        </tr>
+    </thead>
+    <tbody>
+        <style>
+            tr {
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(156, 186, 95);
+                font-family: Verdana;
+            }</style>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>@client.Client_id</td>
+                <td>@client.Name</td>
+                <td>@client.Phone</td>
+                <td>@client.Pet_type</td>
+                <td>@client.Pet_name</td>
+                <td>@client.Pet_age</td>
+                <td>@client.Symptom</td>
+                <td>@client.Date.ToString("yyyy-MM-dd")</td>
+                <td>@client.Time_period</td>
+            </tr>
+        }
+    </tbody>
+</table>
+    </div>

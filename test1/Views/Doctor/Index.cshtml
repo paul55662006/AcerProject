@@ -89,7 +89,7 @@
                         <i class="flaticon-grooming display-1 text-primary me-4"></i>
                         <div>
                             <h5 class="text-uppercase mb-3">班表檢視</h5>
-                            <button class="btn btn-success btn-lg btn-block" id="loadPartialBtn" href="#" )">開啟</button>
+                            <button class="btn btn-primary mt-2" id="loadPartialBtn" href="#" )">開啟</button>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <i class="flaticon-cat display-1 text-primary me-4"></i>
                         <div>
                             <h5 class="text-uppercase mb-3">班表調整</h5>
-                            <button class="btn btn-success btn-lg btn-block" id="loadPartialBtn" href="#" )">開啟</button>
+                            <button class="btn btn-primary mt-2" id="loadPartialBtn" href="#" )">開啟</button>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         <i class="flaticon-cat display-1 text-primary me-4"></i>
                         <div>
                             <h5 class="text-uppercase mb-3">醫師建檔</h5>
-                            <button class="btn btn-success btn-lg btn-block" id="loadPartialBtn" href="#" )">開啟</button>
+                            <button class="btn btn-primary mt-2" id="loadPartialBtn" href="#" )">開啟</button>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                             $('#loadPartialBtn').click(function () {
                                 $.ajax({
                                     url: '/PartialSchedule/LoadPartial', // 對應控制器動作的路徑
-                                    type: 'GET',
+                                    type: 'POST',
                                     success: function (data) {
                                         $('#partialContainer').html(data); // 將返回的 Partial View 內容插入到容器中
                                     },

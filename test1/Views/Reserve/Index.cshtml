@@ -86,41 +86,60 @@
             </svg>
             預約列表
         </div>
-        <table class="table table-bordered">
-            <thead>                
-                <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">主人姓名</th>
-                    <th scope="col">手機號碼</th>
-                    <th scope="col">寵物名稱</th>
-                    <th scope="col">寵物年齡</th>
-                    <th scope="col">寵物症狀</th>
-                    <th scope="col">創建時間</th>
-                </tr>
-            </thead>
-            <tbody>
-                <style>
-                    tr {
-                        border-width: 1px;
-                        border-style: solid;
-                        border-color: rgb(156, 186, 95);
-                        font-family: Verdana;
-                    }</style>
-                @foreach (var client in Model)
-                {
-                    <tr>
-                        <td>@client.Id</td>
-                        <td>@client.Name</td>
-                        <td>@client.Phone</td>
-                        <td>@client.Pet_name</td>
-                        <td>@client.Pet_age</td>
-                        <td>@client.Symptom</td>
-                        <td>@client.initDate</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        <form id="filterForm" method="post" class="d-flex justify-content-start align-items-center mb-3">
+            <div class="mb-3">
+                <label for="startDate">開始日期：</label>
+                <input type="date" id="startDate" name="startDate" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="endDate">結束日期：</label>
+                <input type="date" id="endDate" name="endDate" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="timeSlot">選擇時段：</label>
+                <select id="timeSlot" name="timeSlot" class="form-select" required>
+                    <option value="allDay">整天</option>
+                    <option value="早上">早上</option>
+                    <option value="下午">下午</option>
+                    <option value="晚上">晚上</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary mt-2" id="partial_clientBtn">篩選</button>
+        </form>
+
+        <div id="partialResult"></div>
+
+        <!-- 加入 jQuery 和 AJAX 請求 -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#partial_clientBtn').click(function () {
+                    // 獲取篩選條件
+                    var startDate = $('#startDate').val();
+                    var endDate = $('#endDate').val();
+                    var timeSlot = $('#timeSlot').val();
+
+                    // 發送 AJAX 請求
+                    $.ajax({
+                        url: '/partial_client/partial_client',
+                        type: 'POST',
+                        data: {
+                            startDate: startDate,
+                            endDate: endDate,
+                            timeSlot: timeSlot
+                        },
+                        success: function (response) {
+                            $('#partialResult').html(response);
+                        },
+                        error: function (xhr, status, error) {
+                            alert(`篩選失敗: ${xhr.responseText}`);
+                        }
+                    });
+                });
+            });
+        </script>
     </div>
+
 </body>
 
 </html>

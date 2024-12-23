@@ -13,7 +13,7 @@ namespace test1.Controllers
             _context = context;
         }
 
-        [HttpGet("LoadPartial")]
+        [HttpPost("LoadPartial")]
         public IActionResult LoadPartial()
         {
             var Doctors = _context.Doctor_time.ToList();

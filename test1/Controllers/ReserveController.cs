@@ -5,20 +5,22 @@ namespace test1.Controllers
 {
     public class ReserveController : Controller
     {
-        private readonly AppDbContext _context;
-
-        public ReserveController(AppDbContext context)
-        {
-            _context = context; // 初始化 DbContext
-        }
-
         public IActionResult Index()
         {
-            // 從資料庫中讀取所有 clients 資料
-            var clients = _context.clients.ToList();
-
-            // 將資料傳遞給 View
-            return View(clients);
+            return View();
         }
+
+        //日期選擇器
+        [HttpPost]
+        public IActionResult UpdateTime(DateTime date, string timeSlot)
+        {
+            // 根據日期和時段更新資料庫
+            // 可以在這裡寫入業務邏輯
+            Console.WriteLine($"選擇的日期: {date}, 選擇的時段: {timeSlot}");
+
+            // 返回到檢視或進行其他操作
+            return RedirectToAction("Index");
+        }
+
     }
 }
