@@ -132,6 +132,32 @@
                                 });
                             });
                         });
+
+                        $(document).on('click', '.btn-delete', function () {
+                            var row = $(this).closest('tr'); // 找到該行
+                            var id = $(this).data('id');
+
+                            if (!confirm('確定要刪除這筆資料嗎？')) {
+                                return;
+                            }
+
+                            $.ajax({
+                                url: `/partial_client/delete/${id}`,
+                                type: 'POST',
+                                success: function (result) {
+                                    if (result.success) {
+                                        alert('刪除成功');
+                                        row.remove(); // 刪除該行
+                                    } else {
+                                        alert('刪除失敗');
+                                    }
+                                },
+                                error: function () {
+                                    alert('刪除操作失敗，請稍後再試');
+                                }
+                            });
+                        });
+
                     </script>
 
                 </div>                

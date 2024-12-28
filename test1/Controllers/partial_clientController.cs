@@ -32,34 +32,38 @@ namespace test1.Controllers
 
             // 返回部分檢視
             return PartialView("~/Views/partial_client/Index.cshtml", clients);
+
         }
 
-        // 取得資料（用於編輯時填充表單）
-        [HttpGet("edit/{id}")]
-        public IActionResult Edit(int id)
+        [HttpPost("delete/{Client_id}")]
+        public IActionResult Delete(int Client_id, DateTime startDate, DateTime endDate, string timeSlot)
         {
-            var client = _context.client.FirstOrDefault(c => c.Client_id == id);
+            var client = _context.client.FirstOrDefault(c => c.Client_id == Client_id);
             if (client == null)
             {
-                return NotFound();
-            }
-            return PartialView("~/Views/partial_client/Edit.cshtml", client);
-        }             
-
-        // 刪除資料
-        [HttpPost("delete/{id}")]
-        public IActionResult Delete(int id)
-        {
-            var client = _context.client.FirstOrDefault(c => c.Client_id == id);
-            if (client == null)
-            {
-                return NotFound();
+                return Json(new { success = false, message = "找不到該資料！" });
             }
 
+            // 刪除資料
             _context.client.Remove(client);
             _context.SaveChanges();
 
-            return Json(new { success = true });
+            // 重新取得資料
+            var query = _context.client
+                .Where(c => c.Date.Date >= startDate.Date && c.Date.Date <= endDate.Date);
+
+            if (timeSlot != "allDay")
+            {
+                query = query.Where(c => c.Time_period == timeSlot);
+            }
+
+            var clients = query.ToList();
+
+            // 返回更新的部分視圖
+            return PartialView("~/Views/partial_client/Index.cshtml", clients);
         }
+
+
+
     }
 }
