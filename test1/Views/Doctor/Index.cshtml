@@ -80,9 +80,6 @@
     <!-- Services Start -->
     <div class="container-fluid">
         <div class="container">           
-            <!--時間選擇器-->
-
-            <!--時間選擇器-->
             <div class="row">
                 <div class="col-md-4">
                     <div class="service-item bg-light d-flex p-4">
@@ -108,13 +105,14 @@
                     <div class="service-item bg-light d-flex p-4">
                         <i class="flaticon-cat display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">醫師建檔</h5>
-                            <button class="btn btn-primary mt-2" id="loadPartialBtn" href="#" )">開啟</button>
+                            <h5 class="text-uppercase mb-3">醫師列表</h5>
+                            <button class="btn btn-primary mt-2" id="DoctorPartialBtn" href="#" )">開啟</button>
                         </div>
                     </div>
                 </div>
                 <div id="partialContainer">
                     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <!-- 預約列表 -->
                     <script>
                         $(document).ready(function () {
                             $('#loadPartialBtn').click(function () {
@@ -139,8 +137,36 @@
                         });                        
 
                     </script>
+                </div>
+                
+                <div id="partialContainer">
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <!-- 醫師列表 -->
+                    <script>
+                        $(document).ready(function () {
+                            $('#DoctorPartialBtn').click(function () {
+                                $.ajax({
+                                    url: '/PartialDoctor/DoctorPartial', // 對應控制器動作的路徑
+                                    type: 'POST',
+                                    success: function (data) {
+                                        $('#partialContainer').html(data); // 將返回的 Partial View 內容插入到容器中
 
-                </div>                
+                                        // 滑動到 Partial View 的區域
+                                        $('html, body').animate({
+                                            scrollTop: $('#partialContainer').offset().top
+                                        }, 100); // 滑動動畫時間 100 毫秒
+                                    },
+                                    error: function (xhr, status, error) {
+                                        // 顯示詳細錯誤信息
+                                        alert(`檔案加載失敗，錯誤信息: ${xhr.responseText}`);
+                                        console.error(`錯誤狀態: ${status}, 錯誤: ${error}`);
+                                    }
+                                });
+                            });
+                        });
+
+                    </script>
+                </div>
             </div>
         </div>
     </div>    

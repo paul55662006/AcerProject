@@ -1,12 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using test1.Models;
 
 namespace test1.Controllers
 {
-    public class partial_DoctorsController : Controller
+    [Route("PartialDoctor")]
+    public class PartialDoctorontroller : Controller
     {
-        public IActionResult Index()
+        private readonly AppDbContext _context;
+
+        public PartialDoctorontroller(AppDbContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        [HttpPost("DoctorPartial")]
+        public IActionResult LoadPartial()
+        {
+            var Doctors = _context.Doctors.ToList();
+            return PartialView("~/Views/partial_Doctors/Index.cshtml", Doctors);
         }
     }
+    
 }

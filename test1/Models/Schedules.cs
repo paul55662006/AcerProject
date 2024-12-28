@@ -7,5 +7,8 @@
         public DateTime Date { get; set; }
         public string Time_period { get; set; }
         public int times {  get; set; }
+
+        // 導覽屬性（Navigation Property）
+        public Doctors Doctors { get; set; }
     }
 }

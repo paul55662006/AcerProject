@@ -145,50 +145,60 @@
                 });
 
                 // 刪除按鈕點擊事件
-                $(document).on('click', '.btn-delete', function () {
-                    if (!confirm('確定要刪除這筆資料嗎？')) {
-                        return;
-                    }
+                $(document).ready(function () {
+    // 刪除按鈕點擊事件
+    $(document).on('click', '.btn-delete', function () {
+        if (!confirm('確定要刪除這筆資料嗎？')) {
+            return;
+        }
 
-                    // 獲取刪除資料的 ID
-                    var id = $(this).data('id');
+        // 獲取刪除資料的 ID
+        var id = $(this).data('id');
 
-                    // 發送刪除請求
+        // 發送刪除請求
+        $.ajax({
+            url: `/partial_client/delete/${id}`,
+            type: 'POST',
+            success: function (response) {
+                if (response.success) {
+                    alert('刪除成功');
+                    
+                    // 在刪除成功後，重新更新部分視圖
+                    var startDate = $('#startDate').val();
+                    var endDate = $('#endDate').val();
+                    var timeSlot = $('#timeSlot').val();
+
+                    // 重新載入篩選結果
                     $.ajax({
-                        url: `/partial_client/delete/${id}`,
+                        url: '/partial_client/partial_client',
                         type: 'POST',
-                        success: function (response) {
-                            if (response.success) {
-                                // 刪除成功後，重新調用篩選 API 更新部分視圖
-                                var startDate = $('#startDate').val();
-                                var endDate = $('#endDate').val();
-                                var timeSlot = $('#timeSlot').val();
-
-                                $.ajax({
-                                    url: '/partial_client/partial_client',
-                                    type: 'POST',
-                                    data: {
-                                        startDate: startDate,
-                                        endDate: endDate,
-                                        timeSlot: timeSlot
-                                    },
-                                    success: function (response) {
-                                        $('#partialResult').html(response);
-                                        alert('刪除成功');
-                                    },
-                                    error: function () {
-                                        alert('部分更新失敗，請稍後再試');
-                                    }
-                                });
-                            } else {
-                                alert('刪除失敗：' + response.message);
-                            }
+                        data: {
+                            startDate: startDate,
+                            endDate: endDate,
+                            timeSlot: timeSlot
                         },
-                        error: function () {
-                            alert('刪除失敗，請稍後再試');
+                        success: function (data) {
+                            $('#partialResult').html(data); // 更新部分視圖
+                            $('html, body').animate({
+                                scrollTop: $('#partialResult').offset().top
+                            }, 100); // 滑動到部分視圖
+                        },
+                        error: function (xhr, status, error) {
+                            alert('部分更新失敗，請稍後再試');
+                            console.error(`錯誤: ${error}`);
                         }
                     });
-                });
+                } else {
+                    alert('刪除失敗：' + response.message);
+                }
+            },
+            error: function () {
+                alert('刪除失敗，請稍後再試');
+            }
+        });
+    });
+});
+
             });
         </script>
 
