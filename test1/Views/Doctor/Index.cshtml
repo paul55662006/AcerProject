@@ -123,6 +123,11 @@
                                     type: 'POST',
                                     success: function (data) {
                                         $('#partialContainer').html(data); // 將返回的 Partial View 內容插入到容器中
+
+                                        // 滑動到 Partial View 的區域
+                                        $('html, body').animate({
+                                            scrollTop: $('#partialContainer').offset().top
+                                        }, 100); // 滑動動畫時間 100 毫秒
                                     },
                                     error: function (xhr, status, error) {
                                         // 顯示詳細錯誤信息
@@ -131,32 +136,7 @@
                                     }
                                 });
                             });
-                        });
-
-                        $(document).on('click', '.btn-delete', function () {
-                            var row = $(this).closest('tr'); // 找到該行
-                            var id = $(this).data('id');
-
-                            if (!confirm('確定要刪除這筆資料嗎？')) {
-                                return;
-                            }
-
-                            $.ajax({
-                                url: `/partial_client/delete/${id}`,
-                                type: 'POST',
-                                success: function (result) {
-                                    if (result.success) {
-                                        alert('刪除成功');
-                                        row.remove(); // 刪除該行
-                                    } else {
-                                        alert('刪除失敗');
-                                    }
-                                },
-                                error: function () {
-                                    alert('刪除操作失敗，請稍後再試');
-                                }
-                            });
-                        });
+                        });                        
 
                     </script>
 

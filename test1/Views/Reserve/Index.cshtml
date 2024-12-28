@@ -113,6 +113,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function () {
+                // 篩選按鈕點擊事件
                 $('#partial_clientBtn').click(function () {
                     // 獲取篩選條件
                     var startDate = $('#startDate').val();
@@ -129,47 +130,68 @@
                             timeSlot: timeSlot
                         },
                         success: function (response) {
+                            // 更新部分檢視
                             $('#partialResult').html(response);
+
+                            // 滑動到部分檢視的區域
+                            $('html, body').animate({
+                                scrollTop: $('#partialResult').offset().top
+                            }, 100);
                         },
                         error: function (xhr, status, error) {
                             alert(`篩選失敗: ${xhr.responseText}`);
                         }
                     });
                 });
-            });
 
-            // 刪除功能
-            $(document).on('click', '.btn-delete', function () {
-                if (!confirm('確定要刪除這筆資料嗎？')) {
-                    return;
-                }
-
-                var id = $(this).data('id');
-                var startDate = $('#startDate').val();
-                var endDate = $('#endDate').val();
-                var timeSlot = $('#timeSlot').val();
-
-                $.ajax({
-                    url: `/partial_client/delete/${id}`,
-                    type: 'POST',
-                    data: {
-                        startDate: startDate,
-                        endDate: endDate,
-                        timeSlot: timeSlot
-                    },
-                    success: function (response) {
-                        $('#partialResult').html(response); // 更新部分視圖
-                        alert('刪除成功');
-                    },
-                    error: function () {
-                        alert('刪除失敗，請稍後再試');
+                // 刪除按鈕點擊事件
+                $(document).on('click', '.btn-delete', function () {
+                    if (!confirm('確定要刪除這筆資料嗎？')) {
+                        return;
                     }
+
+                    // 獲取刪除資料的 ID
+                    var id = $(this).data('id');
+
+                    // 發送刪除請求
+                    $.ajax({
+                        url: `/partial_client/delete/${id}`,
+                        type: 'POST',
+                        success: function (response) {
+                            if (response.success) {
+                                // 刪除成功後，重新調用篩選 API 更新部分視圖
+                                var startDate = $('#startDate').val();
+                                var endDate = $('#endDate').val();
+                                var timeSlot = $('#timeSlot').val();
+
+                                $.ajax({
+                                    url: '/partial_client/partial_client',
+                                    type: 'POST',
+                                    data: {
+                                        startDate: startDate,
+                                        endDate: endDate,
+                                        timeSlot: timeSlot
+                                    },
+                                    success: function (response) {
+                                        $('#partialResult').html(response);
+                                        alert('刪除成功');
+                                    },
+                                    error: function () {
+                                        alert('部分更新失敗，請稍後再試');
+                                    }
+                                });
+                            } else {
+                                alert('刪除失敗：' + response.message);
+                            }
+                        },
+                        error: function () {
+                            alert('刪除失敗，請稍後再試');
+                        }
+                    });
                 });
             });
-
-
-
         </script>
+
     </div>
 
 </body>
