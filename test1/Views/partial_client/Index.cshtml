@@ -10,6 +10,7 @@
             <th scope="col">寵物症狀</th>
             <th scope="col">預約日期</th>
             <th scope="col">預約時段</th>
+            <th>操作</th>
         </tr>
     </thead>
     <tbody>
@@ -32,6 +33,9 @@
                 <td>@client.Symptom</td>
                 <td>@client.Date.ToString("yyyy-MM-dd")</td>
                 <td>@client.Time_period</td>
+                <td>                   
+                    <button class="btn btn-danger btn-delete" data-id="@client.Client_id">刪除</button>
+                </td>
             </tr>
         }
     </tbody>
