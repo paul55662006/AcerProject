@@ -34,7 +34,7 @@ namespace test1
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=Doctor}/{action=Index}/{id?}");
+				pattern: "{controller=Schedule}/{action=Index}/{id?}");
 
 			app.Run();
 

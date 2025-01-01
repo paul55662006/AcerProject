@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "71AWG8iWnhwKwqAX8+X8ROtzdTgpKxvSUMlQmW/qMLY=",
+  "Hash": "liRBO4xd2/Xp5hUOByHSPOwzHjfCGvVOVTxn+Tztz4g=",
   "Source": "test1",
   "BasePath": "_content/test1",
   "Mode": "Default",
@@ -1366,6 +1366,44 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\lib\\fullcalendar\\main.min.css",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "lib/fullcalendar/main.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\fullcalendar\\main.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\lib\\fullcalendar\\main.min.js",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "lib/fullcalendar/main.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\fullcalendar\\main.min.js"
+    },
+    {
       "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "test1",
       "SourceType": "Discovered",
@@ -1592,6 +1630,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\lib\\tui-code-snippet\\tui-code-snippet.js",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "lib/tui-code-snippet/tui-code-snippet.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\tui-code-snippet\\tui-code-snippet.js"
     }
   ]
 }

@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "寵物醫院 - 排班";
+}
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Tui.Calendar CSS -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>@ViewData["Title"]</h1>
+        <div id="calendar"></div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
+
+    <!-- Tui.Calendar JavaScript -->
+    <script src="https://uicdn.toast.com/calendar/latest/tui-calendar.js"></script>
+
+    @section Scripts {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                try {
+                    // 初始化 Tui.Calendar
+                    const calendar = new tui.Calendar('#calendar', {
+                        defaultView: 'month', // 預設月視圖
+                        useDetailPopup: true, // 啟用詳細訊息彈窗
+                        useCreationPopup: true, // 啟用新增事件彈窗
+                    });
+
+                    // 添加測試事件
+                    calendar.createSchedules([
+                        {
+                            id: '1',
+                            calendarId: '1',
+                            title: '診療事件 1',
+                            category: 'time',
+                            start: '2025-01-03T10:00:00',
+                            end: '2025-01-03T12:00:00',
+                        },
+                        {
+                            id: '2',
+                            calendarId: '1',
+                            title: '診療事件 2',
+                            category: 'time',
+                            start: '2025-01-04T14:00:00',
+                            end: '2025-01-04T16:00:00',
+                        },
+                    ]);
+                } catch (e) {
+                    console.error('初始化 Tui.Calendar 時出現錯誤：', e);
+                }
+            });
+        </script>
+    }
+</body>
+</html>
