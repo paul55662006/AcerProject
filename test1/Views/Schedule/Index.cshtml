@@ -48,6 +48,7 @@
             taskView: false,
             scheduleView: true,
             useDetailPopup: true,
+                isReadOnly: true
         });
 
         let doctorsData = [];
@@ -72,31 +73,31 @@
         }
 
         // 載入班表
-        function loadSchedules() {
-            const rangeStart = new Date(calendar.getDateRangeStart()).toISOString().split('T')[0];
-            const rangeEnd = new Date(calendar.getDateRangeEnd()).toISOString().split('T')[0];
+            function loadSchedules() {
+                $.ajax({
+                    url: `/api/schedule`,
+                    method: "GET",
+                    success: function (response) {
+                        calendar.clear();
+                        response.forEach(schedule => {
+                            calendar.createSchedules([{
+                                id: schedule.id,
+                                title: schedule.timeSlot === 'morning' ? '上午' :
+                                    schedule.timeSlot === 'afternoon' ? '下午' :
+                                        schedule.timeSlot === 'evening' ? '晚間' : '',
+                                start: schedule.date, // 使用日期即可，因為只顯示上午/下午/晚間
+                                end: schedule.date,
+                                category: 'allday', // 將事件設為 "整天事件" 顯示在日曆
+                                raw: schedule,
+                            }]);
+                        });
+                    },
+                    error: function (xhr) {
+                        console.error("加載班表時發生錯誤：", xhr.responseText || xhr.statusText);
+                    },
+                });
+            }
 
-            $.ajax({
-                url: `/api/schedule?startDate=${rangeStart}&endDate=${rangeEnd}`,
-                method: "GET",
-                success: function (response) {
-                    calendar.clear();
-                    response.forEach(schedule => {
-                        calendar.createSchedules([{
-                            id: schedule.id,
-                            title: schedule.doctorName,
-                            start: schedule.timeSlot === 'morning' ? `${schedule.date}T06:00:00` : schedule.timeSlot === 'afternoon' ? `${schedule.date}T12:00:00` : `${schedule.date}T18:00:00`,
-                            end: schedule.timeSlot === 'morning' ? `${schedule.date}T12:00:00` : schedule.timeSlot === 'afternoon' ? `${schedule.date}T18:00:00` : `${schedule.date}T24:00:00`,
-                            category: 'time',
-                            raw: schedule,
-                        }]);
-                    });
-                },
-                error: function (xhr) {
-                    console.error("加載班表時發生錯誤：", xhr.responseText || xhr.statusText);
-                },
-            });
-        }
 
         // 安排班表
         $("#addScheduleButton").on("click", function () {
