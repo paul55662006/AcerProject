@@ -2,10 +2,11 @@
 {
     public class Doctors
     {
-        public int Doctor_id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
-        public string Pro_type { get; set; }
-        public DateTime initDate { get; set; }
+        public string Specialty { get; set; }
+
+        public ICollection<ScheduleDoctor> ScheduleDoctors { get; set; }
     }
 }
