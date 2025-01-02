@@ -9,112 +9,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
 
-    <!-- Tui.Calendar CSS -->
+    <!-- Tui.Calendar 和 jQuery -->
     <link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
+    <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>@ViewData["Title"]</h1>
 
-        <!-- 篩選器區域 -->
-        <div class="filters">
-            <label for="yearSelector">年份：</label>
-            <select id="yearSelector">
-                <option value="2024">2024</option>
-                <option value="2025" selected>2025</option>
-                <option value="2026">2026</option>
+        <!-- 排班設定區域 -->
+        <div class="schedule-form">
+            <label for="doctorSelector">醫生：</label>
+            <select id="doctorSelector"></select>
+
+            <label for="datePicker">日期：</label>
+            <input type="date" id="datePicker" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+
+            <label for="timeSlotSelectorForm">時段：</label>
+            <select id="timeSlotSelectorForm">
+                <option value="morning">上午 (6:00 - 12:00)</option>
+                <option value="afternoon">下午 (12:00 - 18:00)</option>
+                <option value="evening">晚間 (18:00 - 24:00)</option>
             </select>
 
-            <label for="monthSelector">月份：</label>
-            <select id="monthSelector">
-                <option value="0">1 月</option>
-                <option value="1" selected>2 月</option>
-                <option value="2">3 月</option>
-                <!-- 其他月份 -->
-            </select>
-
-            <label for="categorySelector">寵物類別：</label>
-            <select id="categorySelector">
-                <option value="all" selected>全部</option>
-                <option value="dog">狗</option>
-                <option value="cat">貓</option>
-            </select>
+            <button id="addScheduleButton">安排</button>
         </div>
 
+        <!-- 日曆區域 -->
         <div id="calendar"></div>
     </div>
 
-    <!-- External Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        const calendar = new tui.Calendar('#calendar', {
+            defaultView: 'month',
+            taskView: false,
+            scheduleView: true,
+            useDetailPopup: true,
+        });
 
-    <!-- Tui.Calendar JavaScript -->
-    <script src="https://uicdn.toast.com/calendar/latest/tui-calendar.js"></script>
+        let doctorsData = [];
 
-    @section Scripts {
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                try {
-                    // 初始化 Tui.Calendar
-                    const calendar = new tui.Calendar('#calendar', {
-                        defaultView: 'month', // 預設月視圖
-                        useDetailPopup: true, // 啟用詳細訊息彈窗
-                        useCreationPopup: true, // 啟用新增事件彈窗
+        // 載入醫生資料
+        function loadDoctors() {
+            $.ajax({
+                url: "/api/schedule/doctors",
+                method: "GET",
+                success: function (response) {
+                    doctorsData = response;
+                    const doctorSelector = $("#doctorSelector");
+                    doctorSelector.empty();
+                    response.forEach(doctor => {
+                        doctorSelector.append(`<option value="${doctor.id}">${doctor.name}</option>`);
                     });
-
-                    // 測試事件資料
-                    const schedules = [
-                        {
-                            id: '1',
-                            calendarId: '1',
-                            title: '診療事件 1',
-                            category: 'time',
-                            start: '2025-01-03T10:00:00',
-                            end: '2025-01-03T12:00:00',
-                            petType: 'dog',
-                        },
-                        {
-                            id: '2',
-                            calendarId: '1',
-                            title: '診療事件 2',
-                            category: 'time',
-                            start: '2025-01-04T14:00:00',
-                            end: '2025-01-04T16:00:00',
-                            petType: 'cat',
-                        },
-                    ];
-
-                    calendar.createSchedules(schedules);
-
-                    // 年/月選擇器事件
-                    document.getElementById('yearSelector').addEventListener('change', updateCalendarDate);
-                    document.getElementById('monthSelector').addEventListener('change', updateCalendarDate);
-
-                    // 寵物類別選擇器事件
-                    document.getElementById('categorySelector').addEventListener('change', function () {
-                        const selectedCategory = this.value;
-
-                        const filteredSchedules = schedules.filter(schedule => {
-                            return selectedCategory === 'all' || schedule.petType === selectedCategory;
-                        });
-
-                        calendar.clear();
-                        calendar.createSchedules(filteredSchedules);
-                    });
-
-                    // 更新日曆日期
-                    function updateCalendarDate() {
-                        const year = document.getElementById('yearSelector').value;
-                        const month = document.getElementById('monthSelector').value;
-
-                        const newDate = new Date(year, month);
-                        calendar.setDate(newDate); // 更新日曆到選擇的年月
-                    }
-                } catch (e) {
-                    console.error('初始化 Tui.Calendar 時出現錯誤：', e);
-                }
+                },
+                error: function (xhr) {
+                    console.error("加載醫生資料時發生錯誤：", xhr.responseText || xhr.statusText);
+                },
             });
-        </script>
-    }
+        }
+
+        // 載入班表
+        function loadSchedules() {
+            const rangeStart = new Date(calendar.getDateRangeStart()).toISOString().split('T')[0];
+            const rangeEnd = new Date(calendar.getDateRangeEnd()).toISOString().split('T')[0];
+
+            $.ajax({
+                url: `/api/schedule?startDate=${rangeStart}&endDate=${rangeEnd}`,
+                method: "GET",
+                success: function (response) {
+                    calendar.clear();
+                    response.forEach(schedule => {
+                        calendar.createSchedules([{
+                            id: schedule.id,
+                            title: schedule.doctorName,
+                            start: schedule.timeSlot === 'morning' ? `${schedule.date}T06:00:00` : schedule.timeSlot === 'afternoon' ? `${schedule.date}T12:00:00` : `${schedule.date}T18:00:00`,
+                            end: schedule.timeSlot === 'morning' ? `${schedule.date}T12:00:00` : schedule.timeSlot === 'afternoon' ? `${schedule.date}T18:00:00` : `${schedule.date}T24:00:00`,
+                            category: 'time',
+                            raw: schedule,
+                        }]);
+                    });
+                },
+                error: function (xhr) {
+                    console.error("加載班表時發生錯誤：", xhr.responseText || xhr.statusText);
+                },
+            });
+        }
+
+        // 安排班表
+        $("#addScheduleButton").on("click", function () {
+            const doctorId = $("#doctorSelector").val();
+            const date = $("#datePicker").val();
+            const timeSlot = $("#timeSlotSelectorForm").val();
+
+            if (!doctorId || !date || !timeSlot) {
+                alert("請填寫完整的班表資料！");
+                return;
+            }
+
+            const selectedDoctor = doctorsData.find(doctor => doctor.id == doctorId);
+            if (!selectedDoctor) {
+                alert("找不到所選的醫生！");
+                return;
+            }
+
+            const requestData = {
+                doctorId: parseInt(doctorId),
+                doctorName: selectedDoctor.name,
+                doctorEmail: selectedDoctor.email,
+                doctorPhone: selectedDoctor.phone,
+                doctorSpecialty: selectedDoctor.specialty,
+                date: date,
+                timeSlot: timeSlot,
+            };
+
+            $.ajax({
+                url: "/api/schedule",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(requestData),
+                success: function () {
+                    alert("新增班表成功！");
+                    loadSchedules();
+                },
+                error: function (xhr) {
+                    console.error("新增班表時發生錯誤：", xhr.responseText || xhr.statusText);
+                    alert("新增班表失敗！");
+                },
+            });
+        });
+
+        // 初始化
+        loadDoctors();
+        loadSchedules();
+    });
+    </script>
 </body>
 </html>

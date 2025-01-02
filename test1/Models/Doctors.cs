@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Specialty { get; set; }
-
-        public ICollection<ScheduleDoctor> ScheduleDoctors { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
     }
 }
