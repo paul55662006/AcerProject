@@ -24,16 +24,16 @@
         @foreach (var client in Model)
         {
             <tr>
-                <td>@client.Client_id</td>
+                <td>@client.ClientId</td>
                 <td>@client.Name</td>
                 <td>@client.Phone</td>
-                <td>@client.Pet_type</td>
-                <td>@client.Pet_name</td>
-                <td>@client.Pet_age</td>
-                <td>@client.Symptom</td>
+                <td>@client.PetType</td>
+                <td>@client.PetName</td>
+                <td>@client.PetAge</td>
+                <td>@client.Symptoms</td>
                 <td>@client.Date.ToString("yyyy-MM-dd")</td>
-                <td>@client.Time_period</td>
-                <td><button class="btn btn-danger btn-delete" data-id="@client.Client_id">刪除</button></td>
+                <td>@client.TimeSlot</td>
+                <td><button class="btn btn-danger btn-delete" data-id="@client.ClientId">刪除</button></td>
             </tr>
         }
     </tbody>

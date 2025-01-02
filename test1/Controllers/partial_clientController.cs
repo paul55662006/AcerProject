@@ -18,13 +18,13 @@ namespace test1.Controllers
         public IActionResult partial_client(DateTime startDate, DateTime endDate, string timeSlot)
         {
             // 基本查詢條件：日期範圍
-            var query = _context.client
+            var query = _context.Clients
                 .Where(c => c.Date.Date >= startDate.Date && c.Date.Date <= endDate.Date);
 
             // 時段篩選
             if (timeSlot != "allDay")
             {
-                query = query.Where(c => c.Time_period == timeSlot);
+                query = query.Where(c => c.TimeSlot == timeSlot);
             }
 
             // 執行查詢
@@ -35,16 +35,16 @@ namespace test1.Controllers
 
         }
 
-        [HttpPost("delete/{Client_id}")]
-        public IActionResult Delete(int Client_id)
+        [HttpPost("delete/{ClientId}")]
+        public IActionResult Delete(int ClientId)
         {
-            var client = _context.client.FirstOrDefault(c => c.Client_id == Client_id);
+            var client = _context.Clients.FirstOrDefault(c => c.ClientId == ClientId);
             if (client == null)
             {
                 return Json(new { success = false, message = "找不到該資料！" });
             }
 
-            _context.client.Remove(client);
+            _context.Clients.Remove(client);
             _context.SaveChanges(); // 確保刪除操作被儲存到資料庫
 
             return Json(new { success = true });

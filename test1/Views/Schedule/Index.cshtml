@@ -15,6 +15,32 @@
 <body>
     <div class="container">
         <h1>@ViewData["Title"]</h1>
+
+        <!-- 篩選器區域 -->
+        <div class="filters">
+            <label for="yearSelector">年份：</label>
+            <select id="yearSelector">
+                <option value="2024">2024</option>
+                <option value="2025" selected>2025</option>
+                <option value="2026">2026</option>
+            </select>
+
+            <label for="monthSelector">月份：</label>
+            <select id="monthSelector">
+                <option value="0">1 月</option>
+                <option value="1" selected>2 月</option>
+                <option value="2">3 月</option>
+                <!-- 其他月份 -->
+            </select>
+
+            <label for="categorySelector">寵物類別：</label>
+            <select id="categorySelector">
+                <option value="all" selected>全部</option>
+                <option value="dog">狗</option>
+                <option value="cat">貓</option>
+            </select>
+        </div>
+
         <div id="calendar"></div>
     </div>
 
@@ -36,8 +62,8 @@
                         useCreationPopup: true, // 啟用新增事件彈窗
                     });
 
-                    // 添加測試事件
-                    calendar.createSchedules([
+                    // 測試事件資料
+                    const schedules = [
                         {
                             id: '1',
                             calendarId: '1',
@@ -45,6 +71,7 @@
                             category: 'time',
                             start: '2025-01-03T10:00:00',
                             end: '2025-01-03T12:00:00',
+                            petType: 'dog',
                         },
                         {
                             id: '2',
@@ -53,8 +80,36 @@
                             category: 'time',
                             start: '2025-01-04T14:00:00',
                             end: '2025-01-04T16:00:00',
+                            petType: 'cat',
                         },
-                    ]);
+                    ];
+
+                    calendar.createSchedules(schedules);
+
+                    // 年/月選擇器事件
+                    document.getElementById('yearSelector').addEventListener('change', updateCalendarDate);
+                    document.getElementById('monthSelector').addEventListener('change', updateCalendarDate);
+
+                    // 寵物類別選擇器事件
+                    document.getElementById('categorySelector').addEventListener('change', function () {
+                        const selectedCategory = this.value;
+
+                        const filteredSchedules = schedules.filter(schedule => {
+                            return selectedCategory === 'all' || schedule.petType === selectedCategory;
+                        });
+
+                        calendar.clear();
+                        calendar.createSchedules(filteredSchedules);
+                    });
+
+                    // 更新日曆日期
+                    function updateCalendarDate() {
+                        const year = document.getElementById('yearSelector').value;
+                        const month = document.getElementById('monthSelector').value;
+
+                        const newDate = new Date(year, month);
+                        calendar.setDate(newDate); // 更新日曆到選擇的年月
+                    }
                 } catch (e) {
                     console.error('初始化 Tui.Calendar 時出現錯誤：', e);
                 }
