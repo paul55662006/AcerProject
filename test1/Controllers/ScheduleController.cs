@@ -45,9 +45,14 @@ namespace test1.Controllers
 
         // GET: api/schedule
         [HttpGet]
-        public async Task<IActionResult> GetSchedules([FromQuery] DateTime? startDate, [FromQuery] DateTime? endDate)
+        public async Task<IActionResult> GetSchedules([FromQuery] string? specialty, [FromQuery] DateTime? startDate, [FromQuery] DateTime? endDate)
         {
             var query = _context.Schedules.AsQueryable();
+
+            if (!string.IsNullOrEmpty(specialty) && specialty != "all")
+            {
+                query = query.Where(s => s.DoctorSpecialty == specialty);
+            }
 
             if (startDate.HasValue)
             {
@@ -113,5 +118,6 @@ namespace test1.Controllers
 
             return NoContent();
         }
+
     }
 }

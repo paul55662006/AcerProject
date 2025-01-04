@@ -1,8 +1,4 @@
-﻿@{
-    ViewData["Title"] = "寵物醫院 - 排班";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="utf-8">
@@ -14,30 +10,102 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
     <script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.js"></script>
+
+    <style>
+        /* 調整日曆內的樣式 */
+        .tui-full-calendar-schedule-title {
+            font-size: 10px;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .tui-full-calendar-weekday-grid .tui-full-calendar-dayname {
+            font-size: 12px;
+        }
+        .tui-full-calendar-month .tui-full-calendar-weekday-grid-cell {
+            padding: 2px;
+        }
+
+        /* 自定義按鈕樣式 */
+        .btn {
+            background-color: #4CAF50; /* 綠色背景 */
+            border: none; /* 無邊框 */
+            color: white; /* 白色文字 */
+            padding: 10px 20px; /* 內邊距 */
+            text-align: center; /* 文字居中 */
+            text-decoration: none; /* 無下劃線 */
+            display: inline-block; /* 行內區塊 */
+            font-size: 14px; /* 字體大小 */
+            border-radius: 4px; /* 圓角 */
+            cursor: pointer; /* 鼠標樣式 */
+            transition: background-color 0.3s ease; /* 動畫效果 */
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* 滑鼠懸停時變色 */
+        }
+
+        /* 自定義選擇器樣式 */
+        .custom-select {
+            display: inline-block;
+            width: auto;
+            height: 35px;
+            padding: 5px 10px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #495057;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-shadow: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .custom-select:focus {
+            border-color: #80bdff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* 調整顯示完整班表按鈕位置 */
+        .btn-right {
+            float: right;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>@ViewData["Title"]</h1>
 
-        <!-- 排班設定區域 -->
         <div class="schedule-form">
+            <label for="specialtySelector">專業：</label>
+            <select id="specialtySelector" class="custom-select">
+                <option value="all">不分類</option>
+                <option value="犬">犬</option>
+                <option value="貓">貓</option>
+                <option value="鼠">鼠</option>
+                <option value="兔">兔</option>
+                <option value="其他">其他</option>
+            </select>
+
             <label for="doctorSelector">醫生：</label>
-            <select id="doctorSelector"></select>
+            <select id="doctorSelector" class="custom-select"></select>
 
             <label for="datePicker">日期：</label>
-            <input type="date" id="datePicker" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+            <input type="date" id="datePicker" value="@DateTime.Now.ToString("yyyy-MM-dd")" class="custom-select">
 
             <label for="timeSlotSelectorForm">時段：</label>
-            <select id="timeSlotSelectorForm">
+            <select id="timeSlotSelectorForm" class="custom-select">
                 <option value="morning">上午 (6:00 - 12:00)</option>
                 <option value="afternoon">下午 (12:00 - 18:00)</option>
                 <option value="evening">晚間 (18:00 - 24:00)</option>
             </select>
 
-            <button id="addScheduleButton">安排</button>
+            <button id="addScheduleButton" class="btn">安排</button>
+            <button id="showAllSchedulesButton" class="btn btn-right">顯示完整班表</button>
         </div>
 
-        <!-- 日曆區域 -->
         <div id="calendar"></div>
     </div>
 
@@ -47,63 +115,97 @@
             defaultView: 'month',
             taskView: false,
             scheduleView: true,
-            useDetailPopup: true,
-                isReadOnly: true
+            useDetailPopup: false,
+            isReadOnly: true
         });
 
         let doctorsData = [];
+        let schedulesData = [];
 
-        // 載入醫生資料
+        function updateDoctorSelector(specialtyFilter) {
+            const doctorSelector = $("#doctorSelector");
+            doctorSelector.empty();
+            const filteredDoctors = specialtyFilter === "all" ? doctorsData : doctorsData.filter(d => d.specialty === specialtyFilter);
+            if (filteredDoctors.length > 0) {
+                filteredDoctors.forEach(doctor => {
+                    doctorSelector.append(`<option value="${doctor.id}">${doctor.name} (${doctor.specialty})</option>`);
+                });
+                doctorSelector.val(filteredDoctors[0].id);
+            } else {
+                doctorSelector.append(`<option value="">無醫生</option>`);
+            }
+        }
+
+        function renderSchedules(specialtyFilter) {
+            calendar.clear();
+
+            let filteredSchedules = specialtyFilter === "all" ? schedulesData : schedulesData.filter(s => s.doctorSpecialty === specialtyFilter);
+
+            filteredSchedules = filteredSchedules.sort((a, b) => {
+                const timeSlotOrder = { morning: 0, afternoon: 1, evening: 2 };
+                return timeSlotOrder[a.timeSlot] - timeSlotOrder[b.timeSlot];
+            });
+
+            filteredSchedules.forEach(schedule => {
+                const timeSlotTitle = schedule.timeSlot === 'morning' ? '上午' :
+                                      schedule.timeSlot === 'afternoon' ? '下午' :
+                                      schedule.timeSlot === 'evening' ? '晚間' : '';
+
+                const timeSlotColor = schedule.timeSlot === 'morning' ? '#FFD700' :
+                                      schedule.timeSlot === 'afternoon' ? '#87CEEB' : '#FF6347';
+
+                calendar.createSchedules([{
+                    id: schedule.id,
+                    title: `${timeSlotTitle} - ${schedule.doctorName} - ${schedule.doctorSpecialty}`,
+                    start: schedule.date,
+                    end: schedule.date,
+                    category: 'allday',
+                    color: 'black',
+                    bgColor: timeSlotColor,
+                    borderColor: timeSlotColor
+                }]);
+            });
+        }
+
         function loadDoctors() {
             $.ajax({
                 url: "/api/schedule/doctors",
                 method: "GET",
                 success: function (response) {
                     doctorsData = response;
-                    const doctorSelector = $("#doctorSelector");
-                    doctorSelector.empty();
-                    response.forEach(doctor => {
-                        doctorSelector.append(`<option value="${doctor.id}">${doctor.name}</option>`);
-                    });
+                    updateDoctorSelector("all");
                 },
                 error: function (xhr) {
                     console.error("加載醫生資料時發生錯誤：", xhr.responseText || xhr.statusText);
-                },
+                }
             });
         }
 
-        // 載入班表
-            function loadSchedules() {
-                $.ajax({
-                    url: `/api/schedule`,
-                    method: "GET",
-                    success: function (response) {
-                        calendar.clear();
-                        response.forEach(schedule => {
-                            calendar.createSchedules([{
-                                id: schedule.id,
-                                title: schedule.timeSlot === 'morning' ? '上午' :
-                                    schedule.timeSlot === 'afternoon' ? '下午' :
-                                        schedule.timeSlot === 'evening' ? '晚間' : '',
-                                start: schedule.date, // 使用日期即可，因為只顯示上午/下午/晚間
-                                end: schedule.date,
-                                category: 'allday', // 將事件設為 "整天事件" 顯示在日曆
-                                raw: schedule,
-                            }]);
-                        });
-                    },
-                    error: function (xhr) {
-                        console.error("加載班表時發生錯誤：", xhr.responseText || xhr.statusText);
-                    },
-                });
-            }
+        function loadSchedules(specialtyFilter = "all") {
+            $.ajax({
+                url: "/api/schedule",
+                method: "GET",
+                success: function (response) {
+                    schedulesData = response;
+                    renderSchedules(specialtyFilter);
+                },
+                error: function (xhr) {
+                    console.error("加載班表時發生錯誤：", xhr.responseText || xhr.statusText);
+                }
+            });
+        }
 
+        $("#specialtySelector").on("change", function () {
+            const selectedSpecialty = $(this).val();
+            updateDoctorSelector(selectedSpecialty);
+            renderSchedules(selectedSpecialty);
+        });
 
-        // 安排班表
         $("#addScheduleButton").on("click", function () {
             const doctorId = $("#doctorSelector").val();
             const date = $("#datePicker").val();
             const timeSlot = $("#timeSlotSelectorForm").val();
+            const specialtyFilter = $("#specialtySelector").val();
 
             if (!doctorId || !date || !timeSlot) {
                 alert("請填寫完整的班表資料！");
@@ -133,19 +235,42 @@
                 data: JSON.stringify(requestData),
                 success: function () {
                     alert("新增班表成功！");
-                    loadSchedules();
+                    loadSchedules(specialtyFilter);
                 },
                 error: function (xhr) {
                     console.error("新增班表時發生錯誤：", xhr.responseText || xhr.statusText);
                     alert("新增班表失敗！");
-                },
+                }
             });
         });
 
-        // 初始化
+        calendar.on('clickSchedule', function (event) {
+            const scheduleId = event.schedule.id;
+
+            if (confirm("確定要刪除此班表嗎？")) {
+                $.ajax({
+                    url: `/api/schedule/${scheduleId}`,
+                    method: "DELETE",
+                    success: function () {
+                        alert("班表刪除成功！");
+                        loadSchedules($("#specialtySelector").val());
+                    },
+                    error: function (xhr) {
+                        console.error("刪除班表時發生錯誤：", xhr.responseText || xhr.statusText);
+                        alert("班表刪除失敗！");
+                    }
+                });
+            }
+        });
+
+        $("#showAllSchedulesButton").on("click", function () {
+            renderSchedules("all");
+        });
+
         loadDoctors();
         loadSchedules();
     });
     </script>
+
 </body>
 </html>

@@ -66,7 +66,7 @@ namespace test1
             // ¨MÆg¿qª{∏Ù•—
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Schedule}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }
