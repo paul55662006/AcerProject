@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "test1.Controllers.ScheduleController",
+    "Method": "DeleteSchedulesByDoctor",
+    "RelativePath": "api/Schedule/doctor/{doctorName}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "test1.Controllers.ScheduleController",
     "Method": "GetDoctors",
     "RelativePath": "api/Schedule/doctors",
     "HttpMethod": "GET",

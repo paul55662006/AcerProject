@@ -8,7 +8,6 @@ namespace test1.Models
     public class AppDbContext : DbContext
     {
         public DbSet<Clients> Clients { get; set; } // 對應資料表 Clients
-        public DbSet<doctor> Doctor_time { get; set; } // 對應資料表 Doctor_time
         public DbSet<Doctors> Doctors { get; set; }
         public DbSet<Schedules> Schedules { get; set; }
 

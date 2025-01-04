@@ -119,5 +119,23 @@ namespace test1.Controllers
             return NoContent();
         }
 
+        [HttpDelete("doctor/{doctorName}")]
+        public async Task<IActionResult> DeleteSchedulesByDoctor(string doctorName)
+        {
+            var relatedSchedules = await _context.Schedules
+                .Where(s => s.DoctorName == doctorName)
+                .ToListAsync();
+
+            if (!relatedSchedules.Any())
+            {
+                return NotFound("未找到與該醫生相關的班表記錄。");
+            }
+
+            _context.Schedules.RemoveRange(relatedSchedules);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
     }
 }

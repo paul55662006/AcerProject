@@ -1,0 +1,99 @@
+﻿@model IEnumerable<test1.Models.Doctors>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PET SHOP - Doctors</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Styles -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <style>
+        .btn-height {
+            height: 100%; /* 讓按鈕填滿所在容器高度 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header" style="background-image: url('/img/hero.jpg'); background-size: cover; background-position: center;">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-uppercase text-dark mb-lg-4">寵物醫師檔案</h1>
+                    <h1 class="text-uppercase text-white mb-lg-4">Make Pets Healthy</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Add Doctor Button and Filter Start -->
+    <div class="container my-4">
+        <div class="row align-items-center">
+            <!-- 按鈕 -->
+            <div class="col-md-2">
+                <a href="@Url.Action("Create", "Doctors")" class="btn btn-primary btn-height w-100">醫生建檔</a>
+            </div>
+            <!-- 篩選器 -->
+            <div class="col-md-4">
+                <form method="get" action="/DoctorData/Index">
+                    <label for="specialty" class="form-label">篩選專長：</label>
+                    <select class="form-select" id="specialty" name="specialty" onchange="this.form.submit()">
+                        <!option value="" @(string.IsNullOrEmpty(ViewBag.SelectedSpecialty) ? "selected" : "")>全部</!option>
+                        <!option value="犬" @(ViewBag.SelectedSpecialty == "犬" ? "selected" : "")>犬</!option>
+                        <!option value="貓" @(ViewBag.SelectedSpecialty == "貓" ? "selected" : "")>貓</!option>
+                        <!option value="鼠" @(ViewBag.SelectedSpecialty == "鼠" ? "selected" : "")>鼠</!option>
+                        <!option value="兔" @(ViewBag.SelectedSpecialty == "兔" ? "selected" : "")>兔</!option>
+                        <!option value="其他" @(ViewBag.SelectedSpecialty == "其他" ? "selected" : "")>其他</!option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Add Doctor Button and Filter End -->
+
+    <!-- Doctors List Start -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">醫師資料列表</h2>
+        <table class="table table-bordered text-center">
+            <thead>
+                <tr class="bg-primary text-white">
+                    <th>編號</th>
+                    <th>姓名</th>
+                    <th>電話</th>
+                    <th>專長</th>
+                    <th>Email</th>
+                    <th>地址</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var doctor in Model)
+                {
+                    <tr>
+                        <td>@doctor.Id</td>
+                        <td>@doctor.Name</td>
+                        <td>@doctor.Phone</td>
+                        <td>@doctor.Specialty</td>
+                        <td>@doctor.Email</td>
+                        <td>@doctor.Address</td>
+                        <td>
+                            <form method="post" action="/DoctorData/Delete/@doctor.Id" onsubmit="return confirm('確定要刪除嗎？');">
+                                <button type="submit" class="btn btn-danger btn-sm">刪除</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- Doctors List End -->
+</body>
+
+</html>
