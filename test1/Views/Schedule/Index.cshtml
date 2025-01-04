@@ -34,6 +34,11 @@
                 background-color: #45a049;
             }
 
+        .btn-small {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
         .custom-select {
             padding: 5px 10px;
             font-size: 14px;
@@ -44,11 +49,26 @@
         .btn-right {
             float: right;
         }
+
+        .month-controls {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .schedule-form {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>@ViewData["Title"]</h1>
+
+        <div class="month-controls">
+            <button id="prevMonthButton" class="btn btn-small">上一月</button>
+            <button id="nextMonthButton" class="btn btn-small">下一月</button>
+            <span id="currentMonth" style="margin-left: 10px; font-size: 16px; font-weight: bold;"></span>
+        </div>
 
         <div class="schedule-form">
             <label for="specialtySelector">專業：</label>
@@ -76,8 +96,6 @@
 
             <button id="addScheduleButton" class="btn">安排</button>
 
-            </select>
-
             <label for="individualDoctorSelector">各醫生班表：</label>
             <select id="individualDoctorSelector" class="custom-select">
                 <option value="all">全部</option>
@@ -100,6 +118,12 @@
 
             let doctorsData = [];
             let schedulesData = [];
+            let currentDate = new Date(); // 用於追蹤當前顯示的日期
+
+            function updateCurrentMonthLabel() {
+                const options = { year: 'numeric', month: 'long' };
+                $("#currentMonth").text(currentDate.toLocaleDateString('zh-Hant', options));
+            }
 
             function updateDoctorSelector(specialtyFilter) {
                 const doctorSelector = $("#doctorSelector");
@@ -129,7 +153,6 @@
 
                 let filteredSchedules = specialtyFilter === "all" ? schedulesData : schedulesData.filter(s => s.doctorSpecialty === specialtyFilter);
 
-                // 排序班表，按照上午、下午、晚間的順序
                 const timeSlotOrder = { morning: 0, afternoon: 1, evening: 2 };
                 filteredSchedules.sort((a, b) => {
                     return timeSlotOrder[a.timeSlot] - timeSlotOrder[b.timeSlot];
@@ -156,7 +179,6 @@
                 });
             }
 
-
             function loadDoctors() {
                 $.ajax({
                     url: "/api/schedule/doctors",
@@ -172,9 +194,11 @@
                 });
             }
 
-            function loadSchedules(specialtyFilter = "all") {
+            function loadSchedulesForCurrentMonth(specialtyFilter = "all") {
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
                 $.ajax({
-                    url: "/api/schedule",
+                    url: `/api/schedule?year=${year}&month=${month}`,
                     method: "GET",
                     success: function (response) {
                         schedulesData = response;
@@ -185,6 +209,20 @@
                     }
                 });
             }
+
+            $("#prevMonthButton").on("click", function () {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                calendar.setDate(currentDate);
+                updateCurrentMonthLabel();
+                loadSchedulesForCurrentMonth($("#specialtySelector").val());
+            });
+
+            $("#nextMonthButton").on("click", function () {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                calendar.setDate(currentDate);
+                updateCurrentMonthLabel();
+                loadSchedulesForCurrentMonth($("#specialtySelector").val());
+            });
 
             $("#specialtySelector").on("change", function () {
                 const selectedSpecialty = $(this).val();
@@ -255,13 +293,17 @@
                     data: JSON.stringify(requestData),
                     success: function () {
                         alert("新增班表成功！");
-                        loadSchedules(specialtyFilter);
+                        loadSchedulesForCurrentMonth(specialtyFilter);
                     },
                     error: function (xhr) {
                         console.error("新增班表時發生錯誤：", xhr.responseText || xhr.statusText);
                         alert("新增班表失敗！");
                     }
                 });
+            });
+
+            $("#showAllSchedulesButton").on("click", function () {
+                renderSchedules("all");
             });
 
             calendar.on('clickSchedule', function (event) {
@@ -273,7 +315,7 @@
                         method: "DELETE",
                         success: function () {
                             alert("班表刪除成功！");
-                            loadSchedules($("#specialtySelector").val());
+                            loadSchedulesForCurrentMonth($("#specialtySelector").val());
                         },
                         error: function (xhr) {
                             console.error("刪除班表時發生錯誤：", xhr.responseText || xhr.statusText);
@@ -283,12 +325,10 @@
                 }
             });
 
-            $("#showAllSchedulesButton").on("click", function () {
-                renderSchedules("all");
-            });
-
+            // 初始化載入
+            updateCurrentMonthLabel();
             loadDoctors();
-            loadSchedules();
+            loadSchedulesForCurrentMonth();
         });
     </script>
 </body>
