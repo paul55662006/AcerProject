@@ -11,11 +11,8 @@ namespace test1.Models
         public DbSet<Doctors> Doctors { get; set; }
         public DbSet<Schedules> Schedules { get; set; }
         public DbSet<Employees> Employees { get; set; }
-  
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-        }
 
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options){ }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Clients>()

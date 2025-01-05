@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,28 +27,12 @@
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\customerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\customerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Appointment\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Appointment\\Create.cshtml",
@@ -154,51 +154,50 @@
               "RelativeToolTip": "Views\\Appointment\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T17:30:49.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T17:30:49.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "dbConnect.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\dbConnect.cs",
               "RelativeDocumentMoniker": "Models\\dbConnect.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\dbConnect.cs",
-              "RelativeToolTip": "Models\\dbConnect.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\dbConnect.cs*",
+              "RelativeToolTip": "Models\\dbConnect.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T13:43:09.632Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-01-04T16:17:30.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAUwEsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwEsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T13:38:27.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "CustomerLogInController.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\CustomerLogInController.cs",
               "RelativeDocumentMoniker": "Controllers\\CustomerLogInController.cs",
@@ -206,38 +205,37 @@
               "RelativeToolTip": "Controllers\\CustomerLogInController.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:29:58.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:29:58.343Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\CustomerLogIn\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\CustomerLogIn\\Index.cshtml",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\CustomerLogIn\\Index.cshtml",
               "RelativeToolTip": "Views\\CustomerLogIn\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-05T16:29:27.721Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAywFgAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAxwDYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-04T11:50:45.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -245,8 +243,7 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAwCcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T09:39:03.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T09:39:03.815Z"
             },
             {
               "$type": "Document",
@@ -258,8 +255,7 @@
               "RelativeToolTip": "Controllers\\EmployeeLogInController.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAqwBsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T11:19:56.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T11:19:56.573Z"
             },
             {
               "$type": "Document",
@@ -271,8 +267,7 @@
               "RelativeToolTip": "Models\\Owner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:43:30.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:43:30.584Z"
             },
             {
               "$type": "Document",
@@ -284,8 +279,7 @@
               "RelativeToolTip": "Models\\Employees.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T10:58:27.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T10:58:27.171Z"
             },
             {
               "$type": "Document",
@@ -297,8 +291,7 @@
               "RelativeToolTip": "Controllers\\ScheduleController.cs",
               "ViewState": "AgIAAI0AAAAAAAAAAAAAAHcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T07:41:08.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T07:41:08.784Z"
             },
             {
               "$type": "Document",
@@ -310,8 +303,7 @@
               "RelativeToolTip": "Models\\Schedules.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T08:04:27.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T08:04:27.903Z"
             },
             {
               "$type": "Document",
@@ -323,8 +315,7 @@
               "RelativeToolTip": "Controllers\\ReserveController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAkwBwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T12:00:39.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T12:00:39.099Z"
             },
             {
               "$type": "Document",
@@ -336,8 +327,7 @@
               "RelativeToolTip": "Controllers\\partial_clientController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T12:53:12.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T12:53:12.165Z"
             },
             {
               "$type": "Document",
@@ -385,8 +375,7 @@
               "RelativeToolTip": "Controllers\\ChartController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:11:13.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:11:13.028Z"
             },
             {
               "$type": "Document",
