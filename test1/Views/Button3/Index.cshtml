@@ -1,0 +1,236 @@
+﻿@{    
+    ViewData["Title"] = "FrankIndex";    //頁籤標題
+}
+@model List<test1.Models.Product>
+
+<style>
+    td th input{
+        width:100%;
+        box-sizing: border-box;
+    }
+</style>
+
+<div>    
+    <div class="container">
+        <div style="display:flex;">
+            <a id="add_product" class="btn btn-success" onclick="toggleTable()">                
+                新增品項                
+            </a>
+            <div id="add_data" style="margin:10px">
+                <input id="insertId" type="text" placeholder="輸入ID" disabled>
+                <input id="insertName" type="text" placeholder="輸入產品名稱" disabled>
+                <input id="insertQuantity" type="text" placeholder="輸入數量" disabled>
+                <button id="insertData" disabled>新增</button>
+                <button onclick="clearTableValue()" disabled>清空</button>
+                <input type="text" placeholder="輸入要搜尋的產品名稱" disabled>
+                <button class="search" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </button>
+            </div>              
+        </div>
+
+        <div class="panel panel-default">
+            <div style="padding: 10px; background-color: #e0e0e0;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                    <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                    <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                </svg>
+                藥品列表                
+            </div>
+            <table id="productTableContainer" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">商品ID</th>
+                        <th scope="col">商品名稱</th>
+                        <th scope="col">庫存數量</th>
+                        <th scope="col">操作</th>
+                    </tr>                    
+                </thead>
+                <tbody>
+                    @foreach (var product in Model)
+                    {
+                        <tr>
+                            <td data-product-id="@product.ProductId">@product.ProductId</td>
+                            <td>@product.ProductName</td>
+                            <td>@product.ProductQuantity</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm editData">編輯</button>
+                                <button class="btn btn-danger btn-sm deleteData" data-product-id="@product.ProductId">刪除</button>
+                            </td>
+                        </tr>                        
+                    }
+                </tbody>                
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+    // 更改橫幅字串
+    $(".fs-4.text-white.mb-lg-4").text("庫存管理");
+
+    function toggleTable() {
+        const inputs = document.querySelectorAll("#add_data input");
+        const buttons = document.querySelectorAll("#add_data button");
+        const add_product = document.getElementById("add_product");
+        // 切換 input和button 的禁用狀態
+        inputs.forEach((input) => {
+            input.disabled = !input.disabled;
+        });        
+        buttons.forEach((button) => {
+            button.disabled = !button.disabled;
+        });
+        if (add_product.textContent.trim() === "新增品項"){
+            add_product.textContent = "取消新增";
+        }else{
+            add_product.textContent = "新增品項";
+        }
+    }
+
+    function clearTableValue(){     
+        var inputs = document.querySelectorAll("#add_data input");
+        inputs.forEach(function(input){input.value=""});
+    }   
+    
+     $(document).on("click", ".search", function () {
+        const button = $(this);
+        const row = button.prev("input");        
+        var dataValue = {"searchWords": row.val()}       
+        $.ajax({
+            type: "POST",
+            url: "/Button3/searchData",
+            data: dataValue,
+            // ajax回覆期望得到的格式, 後端目前返回PartView(html), 不用寫此行
+            // dataType: "json",    
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log("ajax請求失敗");
+                alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+            },
+            success: function (response) {
+                $("#productTableContainer").html(response);                
+                clearTableValue();
+            },
+        });
+     });
+    
+     $(document).on("click", ".editData", function () {
+        const button = $(this);
+        const row = button.closest("tr"); // 找到該行
+
+        if (button.text() === "編輯") {
+            // 抓取該行的前三個 <td>
+            row.find("td").each(function (index) {
+                if (index < 3) { // 僅選取前三個 <td>
+                    const currentValue = $(this).text().trim();
+                    $(this).html(`<input type="text" value="${currentValue}" />`);
+                }
+            });            
+            button.text("保存");            
+        } else {
+            // 保存狀態，抓取每個 <input> 的值並更新回 <td>
+            row.find("td").each(function (index) {
+                if (index < 3) { // 僅選取前三個 <td>
+                    const inputValue = $(this).find("input").val(); // 抓取 <input> 的值                    
+                    $(this).text(inputValue); // 更新回 <td> 的內容
+                }
+            });            
+            button.text("編輯");
+
+            var dataValue = { "newProductId": row.find("td").eq(0).text(),
+                              "newProductName": row.find("td").eq(1).text(), 
+                              "newProductQuantity": row.find("td").eq(2).text(),
+                              "oldProductId": row.find("td").eq(0).attr("data-product-id")}
+            $.ajax({
+                type: "POST",
+                url: "/Button3/editData",
+                data: dataValue,
+                // 期望得到一個JSON格式的訊息(EX: {success, 資料更新成功})
+                dataType: "json",
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+                },
+                success: function (result) {
+                    if (result.success) {       
+                        // 第一次ajax請求得到"成功"的回覆(JSON格式), 第二次ajax請求重新載入表格(ParitalView html格式)
+                        $.ajax({
+                            type: "GET",
+                            url: "/Button3/LoadProductTable",
+                            success: function(response){
+                                $("#productTableContainer").html(response);
+                                alert(result.message);
+                                clearTableValue();
+                            },
+                            error: function(){alert("無法加載資料，請稍後在試。")}
+                        });
+                    }else{
+                        alert("錯誤：" + result.message);
+                    }
+                },
+            });
+        }
+    });
+    
+    $(document).on("click", "#insertData", function(e){
+        e.preventDefault();     //防止表單提交
+        var dataValue = { productId: $("#insertId").val(), productName: $("#insertName").val(), productQuantity: $("#insertQuantity").val()}
+        $.ajax({
+            type: "POST",
+            url: '/Button3/InsertData',            
+            data: dataValue,          
+            dataType: "json",
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+            },
+            success: function (result) {
+                if (result.success) {   
+                    // 第一次ajax請求得到"成功"的回覆(JSON格式), 第二次ajax請求重新載入表格(ParitalView html格式)
+                    $.ajax({
+                        type: "GET",
+                        url: "/Button3/LoadProductTable",
+                        success: function(response){
+                            $("#productTableContainer").html(response);
+                            alert(result.message);
+                            clearTableValue();
+                        },
+                        error: function(){alert("無法加載資料，請稍後在試。")}
+                    });
+                }else{
+                    alert("錯誤：" + result.message);
+                }
+            },
+        });
+    });
+
+    $(document).on("click", ".deleteData", function(e){
+        e.preventDefault();     //防止表單提交
+        var dataValue = { productId: $(this).data("product-id")}        
+        $.ajax({
+            type: "POST",
+            url: '/Button3/DeleteData',
+            data: dataValue,
+            dataType: "json",
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
+            },
+            success: function (result) {
+                if (result.success) {   
+                    // 第一次ajax請求得到"成功"的回覆(JSON格式), 第二次ajax請求重新載入表格(ParitalView html格式)
+                    $.ajax({
+                        type: "GET",
+                        url: "/Button3/LoadProductTable",
+                        success: function(response){
+                            $("#productTableContainer").html(response);
+                            alert(result.message);
+                            clearTableValue();
+                        },
+                        error: function(){alert("無法加載資料，請稍後在試。")}
+                    });
+                } else {
+                    alert("錯誤：" + result.message);
+                }
+            },
+        });
+    });    
+</script>
