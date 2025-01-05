@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\test1.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\Pet.py",
+      "PackagePath": "staticwebassets\\Pet.py"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\Time_slot.py",
+      "PackagePath": "staticwebassets\\Time_slot.py"
+    },
+    {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
@@ -39,6 +47,10 @@
     {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\offer.jpg",
       "PackagePath": "staticwebassets\\img\\offer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\pet_types.png",
+      "PackagePath": "staticwebassets\\img\\pet_types.png"
     },
     {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\product-1.png",
@@ -87,6 +99,10 @@
     {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\testimonial.jpg",
       "PackagePath": "staticwebassets\\img\\testimonial.jpg"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\time_slot.png",
+      "PackagePath": "staticwebassets\\img\\time_slot.png"
     },
     {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\user.jpg",

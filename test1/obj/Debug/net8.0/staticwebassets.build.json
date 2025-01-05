@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "liRBO4xd2/Xp5hUOByHSPOwzHjfCGvVOVTxn+Tztz4g=",
+  "Hash": "msVDQv+G2DOsdR2B42iCesYebHfHhtQ1K6pKKMY28qo=",
   "Source": "test1",
   "BasePath": "_content/test1",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\offer.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\pet_types.png",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "img/pet_types.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\pet_types.png"
     },
     {
       "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\product-1.png",
@@ -452,6 +471,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\testimonial-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\time_slot.png",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "img/time_slot.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\time_slot.png"
     },
     {
       "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\user.jpg",
@@ -1649,6 +1687,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\tui-code-snippet\\tui-code-snippet.js"
+    },
+    {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\Pet.py",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "Pet.py",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pet.py"
+    },
+    {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\Time_slot.py",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "Time_slot.py",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Time_slot.py"
     }
   ]
 }

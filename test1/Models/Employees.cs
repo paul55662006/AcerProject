@@ -7,7 +7,6 @@ namespace test1.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "帳號是必填的")]
-        [StringLength(50, ErrorMessage = "帳號長度不可超過50字元")]
         public string Account { get; set; }
 
         [Required(ErrorMessage = "密碼是必填的")]

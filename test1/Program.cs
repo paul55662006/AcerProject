@@ -25,6 +25,8 @@ namespace test1
             // 設置資料庫上下文
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddDbContext<OwnerDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("Default2Connection")));
 
             // 啟用 CORS（跨域資源共享），允許所有源
             builder.Services.AddCors(options =>
@@ -67,7 +69,7 @@ namespace test1
             // 映射默認路由
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=EmployeeLogIn}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }

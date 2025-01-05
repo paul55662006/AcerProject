@@ -1,6 +1,8 @@
 ﻿@model test1.Models.Clients
 
-
+@{
+    ViewData["HideNavbar"] = true; // 隱藏導航列
+}
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "新增預約";

@@ -11,8 +11,7 @@ namespace test1.Models
         public DbSet<Doctors> Doctors { get; set; }
         public DbSet<Schedules> Schedules { get; set; }
         public DbSet<Employees> Employees { get; set; }
-
-        // 添加構造函數，讓 AddDbContext 可以傳遞配置
+  
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
@@ -21,8 +20,12 @@ namespace test1.Models
         {
             modelBuilder.Entity<Clients>()
             .HasKey(c => c.ClientId);
-        }
+        }       
+    }
+    public class OwnerDbContext : DbContext
+    {
+        public OwnerDbContext(DbContextOptions<OwnerDbContext> options) : base(options) { }
 
-
+        public DbSet<Owner> Owner { get; set; }
     }
 }
