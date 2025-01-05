@@ -10,6 +10,7 @@ namespace test1.Models
         public DbSet<Clients> Clients { get; set; } // 對應資料表 Clients
         public DbSet<Doctors> Doctors { get; set; }
         public DbSet<Schedules> Schedules { get; set; }
+        public DbSet<Employees> Employees { get; set; }
 
         // 添加構造函數，讓 AddDbContext 可以傳遞配置
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

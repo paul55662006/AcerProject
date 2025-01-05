@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["HideNavbar"] = true; // 隱藏導航列
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PET SHOP - Pet Shop Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid border-bottom d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center py-2">             
+            </div>
+            <div class="col-lg-4 text-center border-start border-end py-2">             
+            </div>
+            <div class="col-lg-4 text-center py-2">
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+
+    <!-- Navbar End -->
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-uppercase text-dark mb-lg-4">寵物醫院預約系統</h1>
+                    <h1 class="text-uppercase text-white mb-lg-4">Make Pets Healthy</h1>
+                    <p class="fs-4 text-white mb-lg-4">員工帳號登入</p>
+                    <!-- 顯示錯誤提示 -->
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show w-50" role="alert" style="margin-left: 0;">
+                            @TempData["Error"]
+                            <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+
+
+                    <!-- 登入表單 -->
+                    <form asp-action="Index" asp-controller="EmployeeLogIn" method="post">
+                        <div class="mb-3">
+                            <label for="Account" class="form-label">帳號</label>
+                            <input type="text" class="form-control" style="width: 50%; id="Account" name="Account" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password" class="form-label">密碼</label>
+                            <input type="password" class="form-control" style="width: 50%; id="Password" name="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-50">登入</button>
+                    </form>                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+  
+</body>
+
+</html>

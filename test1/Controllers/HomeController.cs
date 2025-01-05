@@ -28,5 +28,12 @@ namespace test1.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
-	}
+
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear(); // 清除所有 Session 資訊
+            return RedirectToAction("Index", "EmployeeLogIn"); // 跳轉到登入頁面
+        }
+    }
 }

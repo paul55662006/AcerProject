@@ -16,6 +16,7 @@ namespace test1
             builder.Services.AddDistributedMemoryCache(); // 必須的內存緩存
             builder.Services.AddSession(options =>
             {
+                options.Cookie.Name = ".YourApp.Session"; // Session 的 Cookie 名稱
                 options.IdleTimeout = TimeSpan.FromMinutes(30); // 設置 Session 過期時間
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true; // 確保在隱私選項啟用時依然可以使用
@@ -66,7 +67,7 @@ namespace test1
             // 映射默認路由
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=EmployeeLogIn}/{action=Index}/{id?}");
 
             app.Run();
         }
