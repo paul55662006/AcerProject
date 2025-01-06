@@ -1,4 +1,7 @@
 ﻿@model test1.Models.RegisterViewModel
+@{
+    ViewData["HideNavbar"] = true; // 隱藏導航列
+}
 
 <form asp-action="Create" method="post" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
@@ -67,6 +70,7 @@
 
         <div class="mt-4">
             <button type="submit" class="btn btn-primary">註冊</button>
+            <a href="@Url.Action("Index", "CustomerLogIn")" class="btn btn-secondary">返回</a>
         </div>
     </div>
 </form>

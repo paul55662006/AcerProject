@@ -93,3 +93,4 @@ wwwroot\Pet.py
 wwwroot\python\test.py
 wwwroot\python\web_crawler.py
 wwwroot\Time_slot.py
+wwwroot\Uploads\pet-placeholder.jpg
