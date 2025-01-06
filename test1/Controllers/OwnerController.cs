@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using test1.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 
 
@@ -116,9 +117,15 @@ namespace test1.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            var owner = _context.Owner.Find(id);
+            var owner = _context.Owner.Include(o => o.Pets).FirstOrDefault(o => o.OwnerID == id);
             if (owner != null)
             {
+                // 刪除所有與飼主相關的寵物
+                if (owner.Pets != null && owner.Pets.Any())
+                {
+                    _context.Pet.RemoveRange(owner.Pets);
+                }
+
                 _context.Owner.Remove(owner);
                 _context.SaveChanges();
             }

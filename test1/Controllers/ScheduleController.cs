@@ -22,10 +22,9 @@ namespace test1.Controllers
         [HttpGet("/Schedule")]
         public IActionResult Index()
         {
-            return View(); // 返回 Views/Schedule/Index.cshtml
+            return View(); 
         }
-
-        // GET: api/schedule/doctors
+        
         [HttpGet("doctors")]
         public async Task<IActionResult> GetDoctors()
         {
