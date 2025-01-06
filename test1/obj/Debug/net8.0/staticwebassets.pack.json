@@ -69,6 +69,26 @@
       "PackagePath": "staticwebassets\\img\\product-4.png"
     },
     {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\product_1557255.jpg",
+      "PackagePath": "staticwebassets\\img\\product_1557255.jpg"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\product_1557260.jpg",
+      "PackagePath": "staticwebassets\\img\\product_1557260.jpg"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\product_1557261.jpg",
+      "PackagePath": "staticwebassets\\img\\product_1557261.jpg"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\product_1558393.jpg",
+      "PackagePath": "staticwebassets\\img\\product_1558393.jpg"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\product_1558397.jpg",
+      "PackagePath": "staticwebassets\\img\\product_1558397.jpg"
+    },
+    {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\img\\team-1.jpg",
       "PackagePath": "staticwebassets\\img\\team-1.jpg"
     },
@@ -355,6 +375,14 @@
     {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\lib\\tui-code-snippet\\tui-code-snippet.js",
       "PackagePath": "staticwebassets\\lib\\tui-code-snippet\\tui-code-snippet.js"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\python\\test.py",
+      "PackagePath": "staticwebassets\\python\\test.py"
+    },
+    {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\python\\web_crawler.py",
+      "PackagePath": "staticwebassets\\python\\web_crawler.py"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.test1.props",

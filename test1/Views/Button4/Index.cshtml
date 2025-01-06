@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Button4 Index";
+}
+@model List<test1.Models.WebCrawler>
+
+<div class="Python">
+    @if (Model != null && Model.Count > 0)
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">產品名稱</th>
+                    <th scope="col">價格</th>
+                    <th scope="col">產品介紹</th>
+                    <th scope="col">圖片</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var webCrawler in Model)
+                {
+                    <tr>
+                        <td>@webCrawler.ProductName</td>
+                        <td>@webCrawler.ProductPrice</td>
+                        <td>@webCrawler.ProductIntroduction</td>
+                        <td><img src="@webCrawler.ProductPictureUrl"></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No data available.</p>
+    }
+</div>
+<button id="update">更多商品</button>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+
+    $(document).on("click", "#update", function () {
+        $.ajax({
+            type: "GET",
+            url: "/Button4/pythonInvoker",
+            success: function(response) {
+                console.log("AJAX 成功");
+                // 將返回的 HTML 插入到表格的 tbody 中, (.html()是替換)
+                $(".Python table tbody").append(response);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error("AJAX Error: ", textStatus, errorThrown);  // 打印錯誤訊息
+                alert("無法加載資料，請稍後再試。");
+            }
+        });
+    });
+
+    let clickCount = 0;
+    document.getElementById('update').addEventListener('click', function() {
+        clickCount++;
+        if (clickCount >= 3) {
+            this.disabled = true;
+        }
+    });
+</script>

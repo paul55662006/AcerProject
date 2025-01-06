@@ -3,20 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\customerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\customerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\customerlogin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\doctordatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\doctordatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\chartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\chartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\button4\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\button4\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\button3\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\button3\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -25,18 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\appointment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\customerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\customerlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\owner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\employeelogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,40 +79,16 @@
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\schedules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\schedules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\partial_clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\partial_clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\chartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\chartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\doctordatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\doctordatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\chart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\chart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\button3controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\button3controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\schedule\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -101,14 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\partial_client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\partial_client\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\button3\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\button3\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\views\\button3\\partialviewindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|solutionrelative:views\\button3\\partialviewindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88CF22CD-3157-4F0D-89FA-7F45A6CD5B40}|test1.csproj|c:\\users\\paul5\\onedrive\\\u684C\u9762\\acerproject\\test1\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,7 +130,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,116 +138,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Appointment\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Appointment\\Create.cshtml",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Appointment\\Create.cshtml",
-              "RelativeToolTip": "Views\\Appointment\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T17:30:49.37Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbConnect.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\dbConnect.cs",
-              "RelativeDocumentMoniker": "Models\\dbConnect.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\dbConnect.cs*",
-              "RelativeToolTip": "Models\\dbConnect.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T13:43:09.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-04T16:17:30.263Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwEsAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAEcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T13:38:27.616Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CustomerLogInController.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\CustomerLogInController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CustomerLogInController.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\CustomerLogInController.cs",
-              "RelativeToolTip": "Controllers\\CustomerLogInController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:29:58.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\CustomerLogIn\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\CustomerLogIn\\Index.cshtml",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\CustomerLogIn\\Index.cshtml",
-              "RelativeToolTip": "Views\\CustomerLogIn\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T16:29:27.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAxwDYAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T11:50:45.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAwCcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T09:39:03.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmployeeLogInController.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\EmployeeLogInController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EmployeeLogInController.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\EmployeeLogInController.cs",
-              "RelativeToolTip": "Controllers\\EmployeeLogInController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAqwBsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T11:19:56.573Z"
             },
             {
               "$type": "Document",
@@ -265,109 +157,26 @@
               "RelativeDocumentMoniker": "Models\\Owner.cs",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\Owner.cs",
               "RelativeToolTip": "Models\\Owner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T16:43:30.584Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Employees.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\Employees.cs",
-              "RelativeDocumentMoniker": "Models\\Employees.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\Employees.cs",
-              "RelativeToolTip": "Models\\Employees.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CustomerLogInController.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\CustomerLogInController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerLogInController.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\CustomerLogInController.cs",
+              "RelativeToolTip": "Controllers\\CustomerLogInController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADwv0wAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T10:58:27.171Z"
+              "WhenOpened": "2025-01-05T16:29:58.343Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ScheduleController.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ScheduleController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ScheduleController.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ScheduleController.cs",
-              "RelativeToolTip": "Controllers\\ScheduleController.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAHcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T07:41:08.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Schedules.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\Schedules.cs",
-              "RelativeDocumentMoniker": "Models\\Schedules.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\Schedules.cs",
-              "RelativeToolTip": "Models\\Schedules.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T08:04:27.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ReserveController.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ReserveController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReserveController.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ReserveController.cs",
-              "RelativeToolTip": "Controllers\\ReserveController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAkwBwAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T12:00:39.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "partial_clientController.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\partial_clientController.cs",
-              "RelativeDocumentMoniker": "Controllers\\partial_clientController.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\partial_clientController.cs",
-              "RelativeToolTip": "Controllers\\partial_clientController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T12:53:12.165Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Button3Controller.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\Button3Controller.cs",
-              "RelativeDocumentMoniker": "Controllers\\Button3Controller.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\Button3Controller.cs",
-              "RelativeToolTip": "Controllers\\Button3Controller.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAUwFEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:01:36.93Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Chart\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Chart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Chart\\Index.cshtml",
-              "RelativeToolTip": "Views\\Chart\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T16:14:35.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DoctorDataController.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorDataController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DoctorDataController.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorDataController.cs",
-              "RelativeToolTip": "Controllers\\DoctorDataController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T14:16:37.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 7,
               "Title": "ChartController.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ChartController.cs",
               "RelativeDocumentMoniker": "Controllers\\ChartController.cs",
@@ -379,19 +188,213 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 6,
+              "Title": "DoctorDataController.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorDataController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorDataController.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorDataController.cs",
+              "RelativeToolTip": "Controllers\\DoctorDataController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T14:16:37.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\CustomerLogIn\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CustomerLogIn\\Index.cshtml",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\CustomerLogIn\\Index.cshtml",
+              "RelativeToolTip": "Views\\CustomerLogIn\\Index.cshtml",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAEkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T16:29:27.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-04T16:17:30.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAABOwDQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-06T13:18:06.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbConnect.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\dbConnect.cs",
+              "RelativeDocumentMoniker": "Models\\dbConnect.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\dbConnect.cs",
+              "RelativeToolTip": "Models\\dbConnect.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwBYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T13:43:09.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "Controllers\\DoctorsController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAuwA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T13:45:18.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "UserModel.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "Models\\UserModel.cs",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\UserModel.cs",
               "RelativeToolTip": "Models\\UserModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T14:00:42.631Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:50:45.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button4\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Button4\\Index.cshtml",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button4\\Index.cshtml",
+              "RelativeToolTip": "Views\\Button4\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAABOwCUAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-06T12:27:03.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button3\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Button3\\Index.cshtml",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button3\\Index.cshtml",
+              "RelativeToolTip": "Views\\Button3\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAABOwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-06T12:29:39.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmployeeLogInController.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\EmployeeLogInController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeLogInController.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\EmployeeLogInController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeLogInController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T11:19:56.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Appointment\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Appointment\\Create.cshtml",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Appointment\\Create.cshtml",
+              "RelativeToolTip": "Views\\Appointment\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T17:30:49.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Employees.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\Employees.cs",
+              "RelativeDocumentMoniker": "Models\\Employees.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Models\\Employees.cs",
+              "RelativeToolTip": "Models\\Employees.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T10:58:27.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ScheduleController.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ScheduleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ScheduleController.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ScheduleController.cs",
+              "RelativeToolTip": "Controllers\\ScheduleController.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAABOwHcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T07:41:08.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ReserveController.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ReserveController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReserveController.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\ReserveController.cs",
+              "RelativeToolTip": "Controllers\\ReserveController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwBwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T12:00:39.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "partial_clientController.cs",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\partial_clientController.cs",
+              "RelativeDocumentMoniker": "Controllers\\partial_clientController.cs",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\partial_clientController.cs",
+              "RelativeToolTip": "Controllers\\partial_clientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T12:53:12.165Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Chart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Chart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Chart\\Index.cshtml",
+              "RelativeToolTip": "Views\\Chart\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T16:14:35.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -400,18 +403,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T11:52:04.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DoctorsController.cs",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DoctorsController.cs",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\DoctorsController.cs",
-              "RelativeToolTip": "Controllers\\DoctorsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T13:45:18.972Z"
             },
             {
               "$type": "Document",
@@ -433,7 +424,7 @@
               "RelativeDocumentMoniker": "Views\\Reserve\\Index.cshtml",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Reserve\\Index.cshtml",
               "RelativeToolTip": "Views\\Reserve\\Index.cshtml",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAAAFwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAABOwFwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-04T12:46:22.848Z"
             },
@@ -452,42 +443,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "PartialViewIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button3\\PartialViewIndex.cshtml",
-              "RelativeDocumentMoniker": "Views\\Button3\\PartialViewIndex.cshtml",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button3\\PartialViewIndex.cshtml",
-              "RelativeToolTip": "Views\\Button3\\PartialViewIndex.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T14:03:15.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button3\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Button3\\Index.cshtml",
-              "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Button3\\Index.cshtml",
-              "RelativeToolTip": "Views\\Button3\\Index.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T14:02:42.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Employee\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Employee\\Create.cshtml",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Employee\\Create.cshtml",
               "RelativeToolTip": "Views\\Employee\\Create.cshtml",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAADAAAACnAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAABOwDAAAACnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-05T10:54:21.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 25,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
@@ -499,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 27,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\EmployeeLogIn\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\EmployeeLogIn\\Index.cshtml",
@@ -511,25 +478,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 28,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Doctors\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Doctors\\Create.cshtml",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\Doctors\\Create.cshtml",
               "RelativeToolTip": "Views\\Doctors\\Create.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAABOwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-04T13:39:40.985Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\DoctorData\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DoctorData\\Index.cshtml",
               "ToolTip": "C:\\Users\\paul5\\OneDrive\\\u684C\u9762\\AcerProject\\test1\\Views\\DoctorData\\Index.cshtml",
               "RelativeToolTip": "Views\\DoctorData\\Index.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAABOwBcAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-04T14:17:35.177Z"
             }

@@ -1,0 +1,20 @@
+﻿@model List<test1.Models.WebCrawler>
+
+@if (Model != null && Model.Count > 0)
+{
+    @foreach (var webCrawler in Model)
+    {
+        <tr>
+            <td>@webCrawler.ProductName</td>
+            <td>@webCrawler.ProductPrice</td>
+            <td>@webCrawler.ProductIntroduction</td>
+            <td><img src="@webCrawler.ProductPictureUrl"></td>
+        </tr>
+    }
+}
+else
+{
+    <tr>
+        <td colspan="4">No data available.</td>
+    </tr>
+}

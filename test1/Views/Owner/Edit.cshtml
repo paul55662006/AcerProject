@@ -1,0 +1,49 @@
+﻿@model test1.Models.Owner
+
+<h1>編輯飼主資料</h1>
+
+<form method="post" action="/Owner/Edit/@Model.OwnerID">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <input type="hidden" name="OwnerID" value="@Model.OwnerID" /> <!-- 必須有主鍵隱藏字段 -->
+
+    <div class="mb-3">
+        <label for="Name" class="form-label">名稱</label>
+        <input type="text" class="form-control" id="Name" name="Name" value="@Model.Name" required />
+        @Html.ValidationMessageFor(model => model.Name, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label for="PhoneNumber" class="form-label">電話</label>
+        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber" value="@Model.PhoneNumber" required />
+        @Html.ValidationMessageFor(model => model.PhoneNumber, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" />
+        @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label for="Address" class="form-label">地址</label>
+        <input type="text" class="form-control" id="Address" name="Address" value="@Model.Address" />
+        @Html.ValidationMessageFor(model => model.Address, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label for="Account" class="form-label">帳號</label>
+        <input type="text" class="form-control" id="Account" name="Account" value="@Model.Account" required />
+        @Html.ValidationMessageFor(model => model.Account, null, new { @class = "text-danger" })
+    </div>
+
+    <div class="mb-3">
+        <label for="Password" class="form-label">密碼</label>
+        <input type="password" class="form-control" id="Password" name="Password" value="@Model.Password" required />
+        @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-success">儲存</button>
+    <a href="/Owner" class="btn btn-secondary">取消</a>
+</form>

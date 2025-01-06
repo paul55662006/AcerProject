@@ -1,0 +1,89 @@
+﻿@model test1.Models.RegisterViewModel
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="container">
+        <h3>註冊資料</h3>
+        <div class="mb-3">
+            <label for="OwnerAccount">帳號:</label>
+            <input asp-for="Owner.Account" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="OwnerPassword">密碼:</label>
+            <input asp-for="Owner.Password" class="form-control" type="password" />
+        </div>
+        <div class="mb-3">
+            <label for="OwnerName">姓名:</label>
+            <input asp-for="Owner.Name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="OwnerPhoneNumber">電話號碼:</label>
+            <input asp-for="Owner.PhoneNumber" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="OwnerEmail">電子信箱:</label>
+            <input asp-for="Owner.Email" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="OwnerAddress">通訊地址:</label>
+            <input asp-for="Owner.Address" class="form-control" />
+        </div>
+
+        <h3>寵物資訊</h3>
+        <div class="mb-3">
+            <label for="PetName">寵物姓名:</label>
+            <input asp-for="Pet.PetName" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="TypeName">寵物種類:</label>
+            <select asp-for="Pet.TypeName" class="form-control" asp-items="@(new SelectList(Model.TypeNames))"></select>
+        </div>
+        <div class="mb-3">
+            <label for="Gender">寵物性別:</label>
+            <select asp-for="Pet.Gender" class="form-control" asp-items="@(new SelectList(Model.Genders))"></select>
+        </div>
+        <div class="mb-3">
+            <label for="BirthDate">出生日期:</label>
+            <input asp-for="Pet.BirthDate" class="form-control" type="date" />
+        </div>
+        <div class="mb-3">
+            <label for="Neutering">是否結紮:</label>
+            <select asp-for="Pet.Neutering" class="form-control" asp-items="@(new SelectList(Model.Neuterings))"></select>
+        </div>
+        <div class="mb-3">
+            <label for="MicrochipID">晶片號碼:</label>
+            <input asp-for="Pet.MicrochipID" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label for="PetPhoto">寵物照片:</label>
+            <input type="file" id="petPhoto" name="petPhoto" class="form-control" accept="image/*" onchange="previewImage(event)" />
+        </div>
+        <!-- 圖片預覽 -->
+        <div class="mb-3">
+            <label>預覽照片:</label>
+            <img id="preview" src="/Uploads/pet-placeholder.jpg" alt="Pet Photo Preview" class="img-fluid" style="max-height: 200px;" />
+        </div>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary">註冊</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    // JS，預覽上傳的圖片
+    function previewImage(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('preview');
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "/Uploads/pet-placeholder.jpg";
+        }
+    }
+</script>

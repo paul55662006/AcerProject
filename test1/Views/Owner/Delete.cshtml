@@ -1,0 +1,21 @@
+﻿@model test1.Models.Owner
+
+<h1>確認刪除</h1>
+
+<p>您確定要刪除以下飼主嗎？</p>
+
+<ul>
+    <li>名稱：@Model.Name</li>
+    <li>電話：@Model.PhoneNumber</li>
+    <li>Email：@Model.Email</li>
+    <li>地址：@Model.Address</li>
+</ul>
+
+<form method="post" asp-action="Delete" asp-route-id="@Model.OwnerID">
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-danger">刪除</button>
+    <a href="/Owner" class="btn btn-secondary">取消</a>
+</form>
+
+
+

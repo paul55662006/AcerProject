@@ -30,6 +30,22 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* 簡單的右上角樣式 */
+        .admin-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 16px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+            .admin-link:hover {
+                text-decoration: underline;
+                color: #388E3C;
+            }
+    </style>    
 </head>
 
 <body>
@@ -55,6 +71,7 @@
                 <div class="col-lg-8 text-center text-lg-start">
                     <h1 class="display-1 text-uppercase text-dark mb-lg-4">寵物醫院預約系統</h1>
                     <h1 class="text-uppercase text-white mb-lg-4">Make Pets Healthy</h1>
+                    <a href="@Url.Action("Index", "EmployeeLogIn")" class="btn btn-outline-light ms-3" style="white-space: nowrap;">後台入口</a>
                     <p class="fs-4 text-white mb-lg-4">會員帳號登入</p>
                     <!-- 顯示錯誤提示 -->
                     @if (TempData["Error"] != null)
@@ -77,8 +94,14 @@
                             <label for="Password" class="form-label">密碼</label>
                             <input type="password" class="form-control" style="width: 50%; id="Password" name="Password" required>
                         </div>
+                        <div class="mb-3">
+                            <label for="captcha" class="form-label">驗證碼</label><br />
+                            <img src="@Url.Action("Captcha", "CustomerLogIn")" alt="驗證碼" id="captcha-image" class="mb-2" />
+                            <a href="#" onclick="document.getElementById('captcha-image').src='@Url.Action("Captcha", "CustomerLogIn")?' + new Date().getTime(); return false;">刷新驗證碼</a>
+                            <input type="text" class="form-control mt-2" id="captcha" name="captcha" placeholder="輸入驗證碼" style="width: 50%;" required>
+                        </div>
                         <button type="submit" class="btn btn-primary w-50">登入</button>
-                        <a href="" class="btn btn-link text-red ps-0">會員註冊</a>
+                         <a asp-controller="CustomerRegister" asp-action="Create" class="btn btn-link text-red ps-0">會員註冊</a>
                     </form>                    
 
                 </div>

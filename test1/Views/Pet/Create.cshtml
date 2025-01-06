@@ -1,0 +1,52 @@
+﻿@model test1.Models.Pet
+
+<h2>新增寵物</h2>
+
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="OwnerID" />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label for="ImageFile">上傳照片</label>
+        <input type="file" class="form-control" id="ImageFile" name="imageFile" />
+    </div>
+    <div class="form-group">
+        <label for="PetName">寵物姓名</label>
+        <input asp-for="PetName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="TypeName">寵物種類</label>
+        @Html.DropDownListFor(model => model.TypeName, (IEnumerable<SelectListItem>)ViewBag.TypeNameOptions, "選擇種類", new { @class = "form-control" })
+        <span asp-validation-for="TypeName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="BirthDate">寵物生日</label>
+        <input asp-for="BirthDate" class="form-control" type="date" required />
+        <span asp-validation-for="BirthDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Gender">寵物性別</label>
+        @Html.DropDownListFor(model => model.Gender, (IEnumerable<SelectListItem>)ViewBag.GenderOptions, "選擇性別", new { @class = "form-control" })
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="Neutering">是否結紮</label>
+        @Html.DropDownListFor(model => model.Neutering, (IEnumerable<SelectListItem>)ViewBag.NeuteringOptions, new { @class = "form-control" })
+        <span asp-validation-for="Neutering" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="MicrochipID">晶片號碼</label>
+        <input asp-for="MicrochipID" class="form-control" />
+        <span asp-validation-for="MicrochipID" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label for="State">狀態</label>
+        @Html.DropDownListFor(model => model.State, (IEnumerable<SelectListItem>)ViewBag.StateOptions, new { @class = "form-control" })
+        <span asp-validation-for="State" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">儲存</button>
+        <a asp-controller="Pet" asp-action="Index" asp-route-ownerId="@ViewBag.OwnerID" class="btn btn-secondary">取消</a>
+    </div>
+</form>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<test1.Models.Pet>
+
+<h1 class="text-center my-4">寵物列表</h1>
+
+<div class="d-flex justify-content-end mb-3">
+    <a asp-action="Create" asp-route-ownerId="@ViewBag.OwnerID" class="btn btn-success me-2">
+        <i class="bi bi-plus-circle"></i> 新增寵物
+    </a>
+    <a asp-controller="Owner" asp-action="Index" asp-route-id="@ViewBag.OwnerID" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> 返回飼主
+    </a>
+</div>
+
+<div class="row">
+    @foreach (var pet in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <!-- 圖片 -->
+                <img class="card-img-top" src="@(!string.IsNullOrEmpty(pet.ImagePath) ? pet.ImagePath : "/Uploads/pet-placeholder.jpg")" alt="Pet Image" style="height: 200px; object-fit: cover;" />
+
+                <div class="card-body">
+                    <!-- 內容 -->
+                    <h5 class="card-title text-center">@pet.PetName</h5>
+                    <p class="card-text text-center">
+                        @pet.TypeName / @pet.Gender / @pet.Neutering<br />
+                        出生日期: @pet.BirthDate.ToString("yyyy/MM/dd")<br />
+                        晶片號碼: @pet.MicrochipID<br />
+                        狀態: @pet.State
+                    </p>
+
+                    <!-- 操作 -->
+                    <div class="d-flex justify-content-between">
+                        <a asp-controller="Pet" asp-action="Edit" asp-route-id="@pet.PetID" class="btn btn-success btn-sm">
+                            編輯
+                        </a>
+                        <a asp-controller="Pet" asp-action="Delete" asp-route-id="@pet.PetID" class="btn btn-danger btn-sm">
+                            刪除
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
