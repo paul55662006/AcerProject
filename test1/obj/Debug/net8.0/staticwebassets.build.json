@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hIX/3rK3iMjUtap3+SuNtFzWeVthk1k3ZPnahvBVfLs=",
+  "Hash": "KMd12xl02Gr+Q0Q3bupUBuKachHBgLqJ+Ag711rM6U8=",
   "Source": "test1",
   "BasePath": "_content/test1",
   "Mode": "Default",
@@ -1858,6 +1858,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Time_slot.py"
+    },
+    {
+      "Identity": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\Uploads\\pet-placeholder.jpg",
+      "SourceId": "test1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\",
+      "BasePath": "_content/test1",
+      "RelativePath": "Uploads/pet-placeholder.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\pet-placeholder.jpg"
     }
   ]
 }

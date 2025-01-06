@@ -1,47 +1,143 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = test1
 build_property.RootNamespace = test1
-build_property.ProjectDir = C:\Users\paul5\OneDrive\桌面\2nd\PetReservation\
+build_property.ProjectDir = C:\Users\paul5\OneDrive\桌面\AcerProject\test1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\paul5\OneDrive\桌面\2nd\PetReservation
+build_property.MSBuildProjectDirectory = C:\Users\paul5\OneDrive\桌面\AcerProject\test1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/paul5/OneDrive/桌面/2nd/PetReservation/Views/Home/Index.cshtml]
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Appointment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Button3/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnV0dG9uM1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Button3/PartialViewIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnV0dG9uM1xQYXJ0aWFsVmlld0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Button4/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnV0dG9uNFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Button4/PartialViewIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnV0dG9uNFxQYXJ0aWFsVmlld0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Chart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/CustomerLogIn/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJMb2dJblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/CustomerRegister/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJSZWdpc3RlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/DoctorData/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yRGF0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Doctors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/EmployeeLogIn/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVMb2dJblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Employee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/paul5/OneDrive/桌面/2nd/PetReservation/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Owner/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/paul5/OneDrive/桌面/2nd/PetReservation/Views/Shared/Error.cshtml]
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Owner/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Owner/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Owner/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/partial_client/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGFydGlhbF9jbGllbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Pet/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Pet/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Pet/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Pet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGV0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Reserve/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Schedule/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2NoZWR1bGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/paul5/OneDrive/桌面/2nd/PetReservation/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/paul5/OneDrive/桌面/2nd/PetReservation/Views/_ViewImports.cshtml]
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/paul5/OneDrive/桌面/2nd/PetReservation/Views/_ViewStart.cshtml]
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/paul5/OneDrive/桌面/2nd/PetReservation/Views/Shared/_Layout.cshtml]
+[C:/Users/paul5/OneDrive/桌面/AcerProject/test1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-msjpe95i0s

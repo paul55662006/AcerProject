@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Time_slot.py"
     },
     {
+      "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\Uploads\\pet-placeholder.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\pet-placeholder.jpg"
+    },
+    {
       "Id": "C:\\Users\\paul5\\OneDrive\\桌面\\AcerProject\\test1\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
